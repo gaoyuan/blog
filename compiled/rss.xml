@@ -3,7 +3,7 @@
   <channel>
     <title>Blog Title</title>
     <link>http://sample.com</link>
-    <pubDate>2012-07-28 15:01:59 -0700</pubDate>
+    <pubDate>2012-07-28 15:38:49 -0700</pubDate>
     <item>
       <title>Hello Wa!</title>
       <link>http://sample.com/hello-wa/</link>
@@ -21,9 +21,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.24694195674029973" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.37591658933693284" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8746926079302659" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5405796370265261" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.0052063786267086964" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5329425994192902" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -52,7 +52,7 @@
               
                 &lt;li&gt;&lt;a href="/pages"&gt;Pages&lt;/a&gt;&lt;/li&gt;
               
-                &lt;li&gt;&lt;a href="/about"&gt;About Myself&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="/about"&gt;About Me&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;
         &lt;/div&gt;
       &lt;/div&gt;
