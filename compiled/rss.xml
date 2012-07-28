@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>Blog Title</title>
-    <link>http://sample.com</link>
-    <pubDate>2012-07-28 15:38:49 -0700</pubDate>
+    <title>Bottom Coder</title>
+    <link>http://www.charlesgao.com/blog</link>
+    <pubDate>2012-07-28 15:46:39 -0700</pubDate>
     <item>
       <title>Hello Wa!</title>
-      <link>http://sample.com/hello-wa/</link>
+      <link>http://www.charlesgao.com/blog/hello-wa/</link>
       <pubDate>2012-07-28</pubDate>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;title&gt;Hello Wa!&lt;/title&gt;
-    &lt;meta name="author" content="Firstname Lastname"&gt;
+    &lt;meta name="author" content="Charles Gao"&gt;
 
     &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
     &lt;!--[if lt IE 9]&gt;
@@ -21,9 +21,9 @@
     &lt;![endif]--&gt;
 
     &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.5405796370265261" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.0052063786267086964" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5329425994192902" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.8423318183217783" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/stylesheets/style.css?0.8195659463085158" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.16892353637387636" type="text/css" rel="stylesheet" media="all"&gt;
 
  
 
@@ -41,7 +41,7 @@
     &lt;div class="navbar"&gt;
       &lt;div class="navbar-inner"&gt;
         &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;Blog Title&lt;/a&gt;
+          &lt;a class="brand" href="/"&gt;Bottom Coder&lt;/a&gt;
           &lt;ul class="nav"&gt;
               
                 &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
@@ -115,7 +115,7 @@
       &lt;/div&gt;
 
       &lt;footer&gt;
-        &lt;p&gt;&amp;copy; Firstname Lastname 2012 
+        &lt;p&gt;&amp;copy; Charles Gao 2012 
           with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
           and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
         &lt;/p&gt;
