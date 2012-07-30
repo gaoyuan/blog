@@ -1,6 +1,6 @@
 layout : disqus
 disqus :
-  short_name : jekyllbootstrap
+  short_name : charlesgao
 livefyre :
   site_id : 123
 intensedebate :
@@ -8,5 +8,5 @@ intensedebate :
 facebook :
   appid : 123
   num_posts: 5
-  width: 580
+  width: 600
   colorscheme: light
