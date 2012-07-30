@@ -1,91 +1,70 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>Shitty Coder</title>
+    <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-28 17:44:45 -0700</pubDate>
+    <pubDate>2012-07-30 01:08:37 -0700</pubDate>
     <item>
-      <title>Hello Wa!</title>
-      <link>http://blog.charlesgao.com//hello-wa/</link>
-      <pubDate>2012-07-28</pubDate>
+      <title>The Second Post</title>
+      <link>http://blog.charlesgao.com//experiment/the-second-post/</link>
+      <pubDate>2012-07-29</pubDate>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Hello Wa!&lt;/title&gt;
-    &lt;meta name="author" content="Charles Gao"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;The Second Post&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8329291731763013" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7048109002590313" type="text/css" rel="stylesheet" media="all"&gt;
 
-    &lt;!-- Le HTML5 shim, for IE6-8 support of HTML elements --&gt;
-    &lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
 
-    &lt;!-- Le styles --&gt;
-    &lt;link href="/assets/twitter/stylesheets/bootstrap.min.css?0.9958076951298314" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/stylesheets/style.css?0.09216823342874636" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/twitter/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.19399516349993395" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;/head&gt;
 
- 
+&lt;body&gt;
 
-    &lt;!-- Le fav and touch icons --&gt;
-  &lt;!-- Update these with your own images
-    &lt;link rel="shortcut icon" href="images/favicon.ico"&gt;
-    &lt;link rel="apple-touch-icon" href="images/apple-touch-icon.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"&gt;
-    &lt;link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"&gt;
-  --&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container"&gt;
-          &lt;a class="brand" href="/"&gt;Shitty Coder&lt;/a&gt;
-          &lt;ul class="nav"&gt;
-              
-                &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/pages"&gt;Pages&lt;/a&gt;&lt;/li&gt;
-              
-                &lt;li&gt;&lt;a href="/about"&gt;About Me&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
     &lt;div class="container"&gt;
+        &lt;div class="content"&gt;
+          &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;The Second Post&lt;/a&gt; &lt;span class="date"&gt;2012-07-29&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;p&gt;Just another post.&lt;/p&gt;
 
-      &lt;div class="content"&gt;
-        &lt;div class="page-header"&gt;
-  &lt;h1&gt;Hello Wa! &lt;/h1&gt;
-&lt;/div&gt;
+&lt;p&gt;There&amp;#39;s no need to adjust your browser or change your eyeglasses. If the first paragraph, above, appears greek to you &#x2014; you aren&amp;#39;t seeing things. It&amp;#39;s an example of greeked text used by desktop publishers and others for years. The Lorem ipsum text is a series of somewhat nonsense sentences derived from some actual Latin components. It is also referred to as placeholder or dummy text. The purpose?&lt;/p&gt;
 
-&lt;div class="row"&gt;
-  &lt;div class="span8"&gt;
-    &lt;p&gt;Awesome&lt;/p&gt;
+&lt;p&gt;In Templates
+Use as placeholder text in templates if there is no placeholder text already in place.
+Initial Layouts
+Use during initial page layout and font selection exercises when first starting a design project or when planning a newsletter or Web page when you don&amp;#39;t have the actual copy available.&lt;/p&gt;
 
-    &lt;hr&gt;
-    &lt;div class="pagination"&gt;
-      &lt;ul&gt;
-        &lt;ul&gt;
-            &lt;li class="prev disabled"&gt;&lt;a&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;Testing Type &amp;amp; Layout&lt;/p&gt;
 
-            &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;Use with various fonts and layouts to get a feel for how each type choice and design will look with real text. The word lengths and letters are similar to the actual frequency of letters in English which makes it good for approximating any text.&lt;/p&gt;
 
-            &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
-        &lt;/ul&gt;
-      &lt;/ul&gt;
+&lt;p&gt;Samples
+Use when creating examples of document designs for clients, students. [including Web pages]
+Type Specimen Sheets&lt;/p&gt;
+
+&lt;p&gt;Use when creating type specimen sheets or examples from which you or clients choose fonts for a project.&lt;/p&gt;
+
+&lt;p&gt;You could cut and paste the first paragraph of this article over and over, or download one of the Lorem ipsum text files I created. The first is simply 3 variations of the same paragraph repeated over and over. The second is 10 unique paragraphs of varying length. Right click (PC) or click/hold (Mac) on the link then save the plain text file to your hard drive. Or click on the link and choose &amp;quot;Save&amp;quot; in your browser. See the links at the end of this article for more variations on the lorem ipsum placeholder text.&lt;/p&gt;
+
+    &lt;div&gt;
+      &lt;a id="post-tags" href="/tags#tagone-ref"&gt;tagone &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+      &lt;a id="post-tags" href="/tags#tagtwo-ref"&gt;tagtwo &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+      &lt;a id="post-tags" href="/tags#tagthree-ref"&gt;tagthree &lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
+      &lt;a id="post-tags" href="/tags#tagfour-ref"&gt;tagfour &lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
     &lt;/div&gt;
-    &lt;hr&gt;
-    &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
 &lt;script&gt;
     var disqus_developer = 1;
-    var disqus_shortname = 'jekyllbootstrap'; // required: replace example with your forum shortname
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -96,50 +75,135 @@
 &lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 &lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
 
-  &lt;/div&gt;
-  
-  &lt;div class="span4"&gt;
-    &lt;h4&gt;Published&lt;/h4&gt;
-    &lt;div class="date"&gt;&lt;span&gt;2012-07-28&lt;/span&gt;&lt;/div&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Categories&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-    &lt;br&gt;
-    &lt;h4&gt;Tags&lt;/h4&gt;
-    &lt;ul class="tag_box"&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
+ 
 
-      &lt;/div&gt;
+        &lt;/div&gt;
 
-      &lt;footer&gt;
-        &lt;p&gt;&amp;copy; Charles Gao 2012 
-          with help from &lt;a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework"&gt;ruhoh&lt;/a&gt;
-          and &lt;a href="http://twitter.github.com/bootstrap/" target="_blank"&gt;Twitter Bootstrap&lt;/a&gt;
-        &lt;/p&gt;
-      &lt;/footer&gt;
+        &lt;div class="sidebar"&gt;
+          &lt;ul class="category"&gt;
+            &lt;h2&gt;Categories&lt;/h2&gt;
+            &lt;li&gt;&lt;a href="/categories#experiment-ref"&gt;experiment &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/categories#again-ref"&gt;again &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/categories#dummy-ref"&gt;dummy &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- container -- &gt;
 
-    &lt;/div&gt; &lt;!-- /container --&gt;
-
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
     &lt;script&gt;
   var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 &lt;/script&gt;
-  &lt;/body&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
+      <title>What If i was caught drinking when i was driving?</title>
+      <link>http://blog.charlesgao.com//experiment/what-if-i-was-caught-drinking-when-i-was-driving/</link>
+      <pubDate>2012-07-28</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;What If i was caught drinking when i was driving?&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.530375579898112" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8927151447356132" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="content"&gt;
+          &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;What If i was caught drinking when i was driving?&lt;/a&gt; &lt;span class="date"&gt;2012-07-28&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;p&gt;Awesome&lt;/p&gt;
+
+&lt;pre class="prettyprint"&gt;
+#include &amp;lt;iostream&amp;gt;
+using namespace std;
+int main(){
+    
+}
+&lt;/pre&gt;
+
+&lt;p&gt;what the fuck?&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t know why there is indent&lt;/p&gt;
+
+    &lt;div&gt;
+      &lt;a id="post-tags" href="/tags#tagone-ref"&gt;tagone &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+      &lt;a id="post-tags" href="/tags#tagtwo-ref"&gt;tagtwo &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+        &lt;/div&gt;
+
+        &lt;div class="sidebar"&gt;
+          &lt;ul class="category"&gt;
+            &lt;h2&gt;Categories&lt;/h2&gt;
+            &lt;li&gt;&lt;a href="/categories#experiment-ref"&gt;experiment &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/categories#again-ref"&gt;again &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/categories#dummy-ref"&gt;dummy &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;&lt;!-- container -- &gt;
+
+    &lt;script&gt;
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </description>
     </item>
