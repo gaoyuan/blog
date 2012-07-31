@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-30 22:53:01 -0700</pubDate>
+    <pubDate>2012-07-31 16:40:12 -0700</pubDate>
     <item>
       <title>The Second Post</title>
       <link>http://blog.charlesgao.com//2012/07/30/the-second-post.html</link>
@@ -13,13 +13,13 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.26119397582407944" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8039245056461523" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.46069470356068987" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.26522120744670397" type="text/css" rel="stylesheet" media="all"&gt;
 
 
 &lt;/head&gt;
 
-&lt;body&gt;
+&lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
       &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
@@ -56,7 +56,7 @@
 
     &lt;/div&gt;
     &lt;script&gt;
-  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
@@ -84,13 +84,13 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7827788576648135" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2732815586642757" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5477414787693327" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4205166941302395" type="text/css" rel="stylesheet" media="all"&gt;
 
 
 &lt;/head&gt;
 
-&lt;body&gt;
+&lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
       &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
@@ -101,7 +101,7 @@
       &lt;div class="post"&gt;
   &lt;div class="title"&gt;&lt;a href=""&gt;The Second Post&lt;/a&gt; &lt;span class="date"&gt;2012-07-29&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;Just another post.&lt;/p&gt;
+  &lt;p&gt;Just another &lt;a href="http://www.google.com/" title="Google"&gt;post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&amp;quot;There&amp;#39;s no need to adjust your browser or change your eyeglasses. If the first paragraph, above, appears greek to you -- you aren&amp;#39;t seeing things. It&amp;#39;s an example of greeked text used by desktop publishers and others for years. The Lorem ipsum text is a series of somewhat nonsense sentences derived from some actual Latin components. It is also referred to as placeholder or dummy text. The purpose?&amp;quot;&lt;/p&gt;
@@ -128,10 +128,10 @@ Type Specimen Sheets&lt;/li&gt;
 &lt;p&gt;You could cut and paste the first paragraph of this article over and over, or download one of the Lorem ipsum text files I created. The first is simply 3 variations of the same paragraph repeated over and over. The second is 10 unique paragraphs of varying length. Right click (PC) or click/hold (Mac) on the link then save the plain text file to your hard drive. Or click on the link and choose &amp;quot;Save&amp;quot; in your browser. See the links at the end of this article for more variations on the lorem ipsum placeholder text.&lt;/p&gt;
 
     &lt;div class="post-tags"&gt;
-      &lt;a href="/tags#tagone-ref"&gt;tagone &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
-      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
-      &lt;a href="/tags#tagthree-ref"&gt;tagthree &lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
-      &lt;a href="/tags#tagfour-ref"&gt;tagfour &lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;
+      &lt;a href="/tags#tagone-ref"&gt;tagone&lt;/a&gt;
+      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo&lt;/a&gt;
+      &lt;a href="/tags#tagthree-ref"&gt;tagthree&lt;/a&gt;
+      &lt;a href="/tags#tagfour-ref"&gt;tagfour&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -155,7 +155,7 @@ Type Specimen Sheets&lt;/li&gt;
 
     &lt;/div&gt;
     &lt;script&gt;
-  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
@@ -183,13 +183,13 @@ Type Specimen Sheets&lt;/li&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;What If i was caught drinking when i was driving?&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.41506414852180085" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8614840367490046" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.19278816291834167" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8137179440894738" type="text/css" rel="stylesheet" media="all"&gt;
 
 
 &lt;/head&gt;
 
-&lt;body&gt;
+&lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
       &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
@@ -215,8 +215,8 @@ int main(){
 &lt;p&gt;I don&amp;#39;t know why there is indent&lt;/p&gt;
 
     &lt;div class="post-tags"&gt;
-      &lt;a href="/tags#tagone-ref"&gt;tagone &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
-      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo &lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+      &lt;a href="/tags#tagone-ref"&gt;tagone&lt;/a&gt;
+      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -240,7 +240,7 @@ int main(){
 
     &lt;/div&gt;
     &lt;script&gt;
-  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));

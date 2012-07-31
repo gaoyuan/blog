@@ -2,16 +2,26 @@
 description: Tags
 ---
 
-<ul class="tag_box inline">
+<div class="tags-tags">
 {{# tags }}
-  {{> tags_list }}
+  <a id="{{ name }}" href="{{url}}">{{name}}</a>
 {{/ tags }}
-</ul>
+</div>
 
-
+<div class="tags-posts">
 {{# tags }}
-  <h2 id="{{name}}-ref">{{name}}</h2>
+  <h3 id="{{name}}-ref">{{ name }}</h3>
   {{# posts?to_posts }}
     <li><a href="{{url}}">{{title}}</a></li>
   {{/ posts?to_posts }}
-{{/ tags }} 
+{{/ tags }}
+</div>
+
+<script type="text/javascript">
+function init(){
+{{# tags }}
+var sz = {{count}} + 15;
+document.getElementById("{{ name }}").style.fontSize = sz.toString() + "px";
+{{/ tags }}
+}
+</script>

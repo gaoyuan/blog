@@ -12,7 +12,7 @@ tags:
   - tagfour
 ---
 
-Just another post.
+Just another [post](http://www.google.com/ "Google").
 
 > "There's no need to adjust your browser or change your eyeglasses. If the first paragraph, above, appears greek to you -- you aren't seeing things. It's an example of greeked text used by desktop publishers and others for years. The Lorem ipsum text is a series of somewhat nonsense sentences derived from some actual Latin components. It is also referred to as placeholder or dummy text. The purpose?"
 

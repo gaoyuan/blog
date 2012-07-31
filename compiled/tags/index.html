@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Tags</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.3159068382900758" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4956216410632567" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.5709883548426262" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9515163394600156" type="text/css" rel="stylesheet" media="all">
 
 
 </head>
 
-<body>
+<body onLoad="init();">
 
     <div class="blog-title">
       <h1><a href="/">SHITTY BLOG</a></h1>
@@ -17,34 +17,43 @@
     </div>
 
     <div class="content">
-      <ul class="tag_box inline">
-  <li>
-    <a href="/tags#tagone-ref">tagone <span>2</span></a>
-  </li>  <li>
-    <a href="/tags#tagtwo-ref">tagtwo <span>2</span></a>
-  </li>  <li>
-    <a href="/tags#tagthree-ref">tagthree <span>1</span></a>
-  </li>  <li>
-    <a href="/tags#tagfour-ref">tagfour <span>1</span></a>
-  </li></ul>
+      <div class="tags-tags">
+  <a id="tagone" href="/tags#tagone-ref">tagone</a>
+  <a id="tagtwo" href="/tags#tagtwo-ref">tagtwo</a>
+  <a id="tagthree" href="/tags#tagthree-ref">tagthree</a>
+  <a id="tagfour" href="/tags#tagfour-ref">tagfour</a>
+</div>
 
-
-  <h2 id="tagone-ref">tagone</h2>
+<div class="tags-posts">
+  <h3 id="tagone-ref">tagone</h3>
     <li><a href="/experiment/2012/07/29/the-second-post.html">The Second Post</a></li>
     <li><a href="/2012/07/28/what-if-i-was-caught-drinking-when-i-was-driving.html">What If i was caught drinking when i was driving?</a></li>
-  <h2 id="tagtwo-ref">tagtwo</h2>
+  <h3 id="tagtwo-ref">tagtwo</h3>
     <li><a href="/experiment/2012/07/29/the-second-post.html">The Second Post</a></li>
     <li><a href="/2012/07/28/what-if-i-was-caught-drinking-when-i-was-driving.html">What If i was caught drinking when i was driving?</a></li>
-  <h2 id="tagthree-ref">tagthree</h2>
+  <h3 id="tagthree-ref">tagthree</h3>
     <li><a href="/experiment/2012/07/29/the-second-post.html">The Second Post</a></li>
-  <h2 id="tagfour-ref">tagfour</h2>
+  <h3 id="tagfour-ref">tagfour</h3>
     <li><a href="/experiment/2012/07/29/the-second-post.html">The Second Post</a></li>
- 
+</div>
+
+<script type="text/javascript">
+function init(){
+var sz = 2 + 15;
+document.getElementById("tagone").style.fontSize = sz.toString() + "px";
+var sz = 2 + 15;
+document.getElementById("tagtwo").style.fontSize = sz.toString() + "px";
+var sz = 1 + 15;
+document.getElementById("tagthree").style.fontSize = sz.toString() + "px";
+var sz = 1 + 15;
+document.getElementById("tagfour").style.fontSize = sz.toString() + "px";
+}
+</script>
 
 
     </div>
     <script>
-  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
