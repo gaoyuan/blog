@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-31 16:40:12 -0700</pubDate>
+    <pubDate>2012-07-31 16:47:31 -0700</pubDate>
     <item>
       <title>The Second Post</title>
       <link>http://blog.charlesgao.com//2012/07/30/the-second-post.html</link>
@@ -13,10 +13,16 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.46069470356068987" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.26522120744670397" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7523237177139777" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7266712797044239" type="text/css" rel="stylesheet" media="all"&gt;
 
 
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
@@ -55,12 +61,6 @@
  
 
     &lt;/div&gt;
-    &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
     &lt;!-- Google Prettify --&gt;
 &lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -84,10 +84,16 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5477414787693327" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4205166941302395" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.002854781726739253" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.39483389576802264" type="text/css" rel="stylesheet" media="all"&gt;
 
 
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
@@ -154,12 +160,6 @@ Type Specimen Sheets&lt;/li&gt;
  
 
     &lt;/div&gt;
-    &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
     &lt;!-- Google Prettify --&gt;
 &lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -183,10 +183,16 @@ Type Specimen Sheets&lt;/li&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;What If i was caught drinking when i was driving?&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.19278816291834167" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8137179440894738" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8030229733038897" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7888014427115889" type="text/css" rel="stylesheet" media="all"&gt;
 
 
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
@@ -239,12 +245,6 @@ int main(){
  
 
     &lt;/div&gt;
-    &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
     &lt;!-- Google Prettify --&gt;
 &lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
 &lt;script&gt;
