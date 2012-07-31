@@ -3,8 +3,6 @@ title: What If i was caught drinking when i was driving?
 date: '2012-07-28'
 description:
 categories:
-  - experiment
-  - dummy
 tags:
   - tagone
   - tagtwo

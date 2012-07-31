@@ -6,7 +6,7 @@ theme : charlesgao
 production_url : http://blog.charlesgao.com/
 
 posts:
-  permalink: /:categories/:title/
+  permalink: 
   summary_lines: 20
   latest: 10
 

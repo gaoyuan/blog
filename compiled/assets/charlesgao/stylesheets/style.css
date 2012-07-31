@@ -1,2 +1,131 @@
-html{margin:0}body{background:#fff;line-height:1;position:relative;margin:0 auto;overflow-x:hidden}a{color:#000}h1 a{color:#000;text-decoration:none}a:hover{text-decoration:none}h1,h2,h3,h4{margin:0;font-weight:400}.blog-title{width:816px;margin:auto}.blog-title h1{margin-top:30px;font-size:25px;font-family:times,Times New Roman,times-roman,georgia,serif;line-height:25px;letter-spacing:-1px;color:#444}.blog-title h1 a:link,.blog-title h1 hover,.blog-title h1 active,.blog-title h1 visited{text-decoration:none}.blog-title h3{font-family:times,Times New Roman,times-roman,georgia,serif;letter-spacing:.5px;font-style:italic;font-size:13px}.container{width:816px;margin:20px auto}.content{float:left;width:600px}.content .post,.content .comments{margin-bottom:15px;font-family:times,Times New Roman,times-roman,georgia,serif;font-size:16px;background-color:#fff;border:0;padding:15px;border:1px dashed #262626;line-height:16px;box-shadow:0 0 15px rgba(0,0,0,.5);-moz-box-shadow:0 0 15px rgba(0,0,0,.5);-webkit-box-shadow:0 0 15px rgba(0,0,0,.5)}.content .post .title,.content .comments .title{font-family:Georgia,serif;font-size:20px;color:#4E443C;font-variant:small-caps;text-transform:none;font-weight:100;margin-bottom:0}.content .post .date,.content .comments .date{color:#fff;background-color:green;font-size:10px;border-width:1px;border-style:dashed}.content .post a,.content .comments a{text-decoration:none}.sidebar{width:200px;float:right;border:1px dashed #262626;line-height:20px;box-shadow:0 0 15px rgba(0,0,0,.5);-moz-box-shadow:0 0 15px rgba(0,0,0,.5);-webkit-box-shadow:0 0 15px rgba(0,0,0,.5)}.sidebar .category h2{font-family:Georgia,serif;margin:0 auto;position:relative}#post-tags{color:#fff;padding:2px 2px 2px 2px;background-color:rgba(41,102,163,.5);font-size:14px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.5);-moz-box-shadow:0 0 5px rgba(0,0,0,.5);-webkit-box-shadow:0 0 5px rgba(0,0,0,.5)}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+html {
+  margin: 0;
+}
+body {
+  background: #fff;
+  line-height: 1;
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+a {
+  color: #000;
+}
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: normal;
+}
+.blog-title {
+  width: 800px;
+  margin: auto;
+}
+.blog-title h1 {
+  margin-top: 30px;
+  font-size: 25px;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  line-height: 25px;
+  letter-spacing: -1px;
+  color: #444;
+}
+.blog-title h1 a:link,
+.blog-title h1 hover,
+.blog-title h1 active,
+.blog-title h1 visited {
+  text-decoration: none;
+}
+.blog-title h3 {
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  font-size: 13px;
+}
+.content {
+  margin: 20px auto;
+  width: 800px;
+}
+.content .post,
+.content .comments {
+  margin-bottom: 15px;
+  font-family: times, Times New Roman, times-roman, georgia, serif;
+  font-size: 16px;
+  background-color: white;
+  border: 0;
+  padding: 15px;
+  border: 1px dashed #262626;
+  line-height: 16px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+}
+.content .post .title,
+.content .comments .title {
+  font-family: Georgia,serif;
+  font-size: 20px;
+  color: #4E443C;
+  font-variant: small-caps;
+  text-transform: none;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+.content .post .date,
+.content .comments .date {
+  color: #fff;
+  background-color: green;
+  font-size: 10px;
+  border-width: 1px;
+  border-style: dashed;
+}
+.content .post a,
+.content .comments a {
+  text-decoration: none;
+}
+.sidebar {
+  width: 200px;
+  float: right;
+  border: 1px dashed #262626;
+  line-height: 20px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
+}
+.sidebar .category h2 {
+  font-family: Georgia,serif;
+  margin: 0 auto;
+  position: relative;
+}
+.post-tags {
+  margin: 0;
+  padding: 5px 0 ;
+  overflow: hidden;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.post-tags a {
+  padding: 3px 6px;
+  background: #eee;
+  color: #228B22;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.post-tags a:hover {
+  background: #228B22;
+  color: #FFF;
+}
+blockquote {
+  padding: 8px;
+  background-color: #eee;
+  border-left: 3px solid #aaa;
+  margin: 5px;
+  text-indent: 23px;
+}

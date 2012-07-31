@@ -5,9 +5,9 @@ layout : default
   <div class="title"><a href="{{ url }}">{{ page.title }}</a> <span class="date">{{ page.date }}</span></h3></div>
   <div>
   {{{ content }}}
-    <div>
+    <div class="post-tags">
     {{# page.tags?to_tags }}
-      <a id="post-tags" href="{{url}}">{{name}} <sup>{{count}}</sup></a>
+      <a href="{{url}}">{{name}} <sup>{{count}}</sup></a>
     {{/ page.tags?to_tags }}
     </div>
   </div>
