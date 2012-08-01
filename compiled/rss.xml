@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-31 20:00:49 -0700</pubDate>
+    <pubDate>2012-07-31 20:06:01 -0700</pubDate>
     <item>
       <title>Keep Going -- Reading the Ph.D. Grind</title>
       <link>http://blog.charlesgao.com//2012/07/31/keep-going-reading-the-ph-d-grind.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.50399632782024" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.396527729993184" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7723868461559482" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4153393852338003" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -58,7 +58,7 @@
 &lt;p&gt;In &lt;em&gt;Year One&lt;/em&gt; Philip introduces the mechanism behind the publication of CS papers:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word &#x201C;conference&#x201D; means something quite different. The computer science conference publication process works roughly as follows:&lt;/p&gt;
+&lt;p&gt;Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word &lt;code&gt;conference&lt;/code&gt; means something quite different. The computer science conference publication process works roughly as follows:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Each conference issues a call for papers with a list of topics of interest and a specific submission deadline.&lt;/p&gt;&lt;/li&gt;
@@ -69,13 +69,13 @@
 &lt;li&gt;&lt;p&gt;Authors of accepted papers attend the conference to give a 30-minute talk on their paper. All accepted papers are then archived online in a digital library.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it&amp;#39;s not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication&#x2014;a process that might take several years. (A paper can be submitted to only one conference at a time.)&lt;/p&gt;
+&lt;p&gt;A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it&amp;#39;s not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication - a process that might take several years. (A paper can be submitted to only one conference at a time.)&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Therefore it is extremely competitive to publish a top-tier conference paper. However, there are ways to improve the chance as Philip unveils the following facts:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren&amp;#39;t able to &#x201C;pitch&#x201D; our paper submissions in a way that appealed to reviewers&amp;#39; expectations.&lt;/p&gt;
+&lt;p&gt;Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren&amp;#39;t able to &lt;code&gt;pitch&lt;/code&gt; our paper submissions in a way that appealed to reviewers&amp;#39; expectations.&lt;/p&gt;
 
 &lt;p&gt;...&lt;/p&gt;
 

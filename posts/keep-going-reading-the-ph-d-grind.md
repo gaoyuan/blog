@@ -18,7 +18,7 @@ This book is definitely worth reading, especially for me as a grad student who i
 
 In *Year One* Philip introduces the mechanism behind the publication of CS papers:
 
-> Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word “conference” means something quite different. The computer science conference publication process works roughly as follows:
+> Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word `conference` means something quite different. The computer science conference publication process works roughly as follows:
 
 > 1. Each conference issues a call for papers with a list of topics of interest and a specific submission deadline.
 
@@ -32,11 +32,11 @@ In *Year One* Philip introduces the mechanism behind the publication of CS paper
 
 > 6. Authors of accepted papers attend the conference to give a 30-minute talk on their paper. All accepted papers are then archived online in a digital library.
 
-> A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it's not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication—a process that might take several years. (A paper can be submitted to only one conference at a time.)
+> A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it's not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication - a process that might take several years. (A paper can be submitted to only one conference at a time.)
  
 Therefore it is extremely competitive to publish a top-tier conference paper. However, there are ways to improve the chance as Philip unveils the following facts:
 
-> Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren't able to “pitch” our paper submissions in a way that appealed to reviewers' expectations.
+> Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren't able to `pitch` our paper submissions in a way that appealed to reviewers' expectations.
 
 > ...
 
