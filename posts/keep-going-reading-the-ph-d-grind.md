@@ -50,4 +50,4 @@ Throughout the memoir, perhaps the most precious thing I learned is the importan
 
 I think what hinders me from creating my connections is the lack of a good habit of consulting others. When encountering problems, I always attempt to solve them by myself, and seldom seek help from others. Asking for advice is of no harm. Instead it creates serendipities and boosts relationships. A very important point to remember.
 
-In spite of the successful graduation, Philip chose to quit academia and is now working at Google.His strong initiative and good working habits will certainly push himself towards future success. Anyway, thanks for the great book, Philip!
+In spite of the successful graduation, Philip chose to quit academia and is now working at Google. His strong initiative and good working habits will certainly push himself towards future success. Anyway, thanks for the great book, Philip!
