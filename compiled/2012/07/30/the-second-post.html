@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>The Second Post</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.5496703225793229" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8964503194157684" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.35543069370284364" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.021657825634553873" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -13,6 +13,21 @@
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
+    <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 </head>
 
 <body onLoad="init();">
@@ -26,7 +41,12 @@
       <div class="post">
   <div class="title"><a href="">The Second Post</a> <span class="date">2012-07-30</span></h3></div>
   <div>
-  <p><img width="500" src="/assets/media/0.5.jpeg"></p>
+  <p>The equation <code>\( \sqrt{3x-1}+(1+x)^2 \)</code> is not as complex as the one below:</p>
+
+<p><code>
+\[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]
+</code>
+<img width="500" src="/assets/media/0.5.jpeg"></p>
 
     <div class="post-tags">
     </div>

@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-31 16:57:32 -0700</pubDate>
+    <pubDate>2012-07-31 18:01:56 -0700</pubDate>
     <item>
       <title>The Second Post</title>
       <link>http://blog.charlesgao.com//2012/07/30/the-second-post.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.22651076097834322" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9190633104981306" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4380753686022324" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5430474708922935" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -23,6 +23,21 @@
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 &lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
@@ -36,7 +51,12 @@
       &lt;div class="post"&gt;
   &lt;div class="title"&gt;&lt;a href=""&gt;The Second Post&lt;/a&gt; &lt;span class="date"&gt;2012-07-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;&lt;img width="500" src="/assets/media/0.5.jpeg"&gt;&lt;/p&gt;
+  &lt;p&gt;The equation &lt;code&gt;\( \sqrt{3x-1}+(1+x)^2 \)&lt;/code&gt; is not as complex as the one below:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+\[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]
+&lt;/code&gt;
+&lt;img width="500" src="/assets/media/0.5.jpeg"&gt;&lt;/p&gt;
 
     &lt;div class="post-tags"&gt;
     &lt;/div&gt;
@@ -84,8 +104,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4027069798885796" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0038055036516606577" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9487533579367625" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7365611878366388" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -94,6 +114,21 @@
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 &lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
@@ -183,8 +218,8 @@ Type Specimen Sheets&lt;/li&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;What If i was caught drinking when i was driving?&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.49491140450047055" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8107150359476754" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.08672670823135864" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5989710631667833" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -193,6 +228,21 @@ Type Specimen Sheets&lt;/li&gt;
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 &lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body onLoad="init();"&gt;
