@@ -3,18 +3,18 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-31 18:01:56 -0700</pubDate>
+    <pubDate>2012-07-31 20:00:49 -0700</pubDate>
     <item>
-      <title>The Second Post</title>
-      <link>http://blog.charlesgao.com//2012/07/30/the-second-post.html</link>
-      <pubDate>2012-07-30</pubDate>
+      <title>Keep Going -- Reading the Ph.D. Grind</title>
+      <link>http://blog.charlesgao.com//2012/07/31/keep-going-reading-the-ph-d-grind.html</link>
+      <pubDate>2012-07-31</pubDate>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4380753686022324" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5430474708922935" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.50399632782024" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.396527729993184" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -49,230 +49,58 @@
 
     &lt;div class="content"&gt;
       &lt;div class="post"&gt;
-  &lt;div class="title"&gt;&lt;a href=""&gt;The Second Post&lt;/a&gt; &lt;span class="date"&gt;2012-07-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Keep Going -- Reading the Ph.D. Grind&lt;/a&gt; &lt;span class="date"&gt;2012-07-31&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;The equation &lt;code&gt;\( \sqrt{3x-1}+(1+x)^2 \)&lt;/code&gt; is not as complex as the one below:&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;The Ph.D. Grind&lt;/em&gt; is a book written by Philip J. Guo, a student who has just finished his six-year graduate life at Stanford. In the book, Philip mainly addresses his research experience chronologically, giving an detailed account of the kinds of research he did and the way through which he achieved his goal. The book is freely available &lt;a href="http://pgbovine.net/PhD-memoir.htm"&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-\[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]
-&lt;/code&gt;
-&lt;img width="500" src="/assets/media/0.5.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;This book is definitely worth reading, especially for me as a grad student who is about to start his second year. Luckily Philip happens to be a CS student -- a major very close to mine. So there is a lot I can learn from his experience.&lt;/p&gt;
 
-    &lt;div class="post-tags"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="comments"&gt;
-&lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-&lt;/div&gt;
- 
-
-    &lt;/div&gt;
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint ";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
-      <title>The Second Post</title>
-      <link>http://blog.charlesgao.com//experiment/2012/07/29/the-second-post.html</link>
-      <pubDate>2012-07-29</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;The Second Post&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9487533579367625" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7365611878366388" type="text/css" rel="stylesheet" media="all"&gt;
-
-
-  &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
-    &lt;script type='text/x-mathjax-config'&gt;
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$','$'], ['\\(','\\)']],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-    });
-    MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i &lt; all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-    });
-    &lt;/script&gt;
-    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body onLoad="init();"&gt;
-
-    &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
-      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
-    &lt;/div&gt;
-
-    &lt;div class="content"&gt;
-      &lt;div class="post"&gt;
-  &lt;div class="title"&gt;&lt;a href=""&gt;The Second Post&lt;/a&gt; &lt;span class="date"&gt;2012-07-29&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
-  &lt;div&gt;
-  &lt;p&gt;Just another &lt;a href="http://www.google.com/" title="Google"&gt;post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Year One&lt;/em&gt; Philip introduces the mechanism behind the publication of CS papers:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&amp;quot;There&amp;#39;s no need to adjust your browser or change your eyeglasses. If the first paragraph, above, appears greek to you -- you aren&amp;#39;t seeing things. It&amp;#39;s an example of greeked text used by desktop publishers and others for years. The Lorem ipsum text is a series of somewhat nonsense sentences derived from some actual Latin components. It is also referred to as placeholder or dummy text. The purpose?&amp;quot;&lt;/p&gt;
+&lt;p&gt;Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word &#x201C;conference&#x201D; means something quite different. The computer science conference publication process works roughly as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Each conference issues a call for papers with a list of topics of interest and a specific submission deadline.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Researchers submit their papers by that deadline. Each conference typically receives 100 to 300 paper submissions, and each paper contains the equivalent of 30 to 40 pages of double-spaced text.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The conference program committee (PC), consisting of around 20 expert researchers, splits up the submitted papers and reviews them. Each paper is reviewed by three to five people, who are either PC members or volunteer external reviewers solicited by PC members. The review process takes about three months.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;After everyone on the PC is done with their reviews, the PC meets and decides which papers to accept and which to reject based on reviewer preferences.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The PC emails all authors to notify them of whether their papers have been accepted or rejected and attaches the written reviews to the notification emails.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Authors of accepted papers attend the conference to give a 30-minute talk on their paper. All accepted papers are then archived online in a digital library.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it&amp;#39;s not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication&#x2014;a process that might take several years. (A paper can be submitted to only one conference at a time.)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;In Templates
-Use as placeholder text in templates if there is no placeholder text already in place.
-Initial Layouts
-Use during initial page layout and font selection exercises when first starting a design project or when planning a newsletter or Web page when you don&amp;#39;t have the actual copy available.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Testing Type &amp;amp; Layout&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Therefore it is extremely competitive to publish a top-tier conference paper. However, there are ways to improve the chance as Philip unveils the following facts:&lt;/p&gt;
 
-&lt;p&gt;Use with various fonts and layouts to get a feel for how each type choice and design will look with real text. The word lengths and letters are similar to the actual frequency of letters in English which makes it good for approximating any text.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren&amp;#39;t able to &#x201C;pitch&#x201D; our paper submissions in a way that appealed to reviewers&amp;#39; expectations.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Samples
-Use when creating examples of document designs for clients, students. [including Web pages]
-Type Specimen Sheets&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;...&lt;/p&gt;
 
-&lt;p&gt;Use when creating type specimen sheets or examples from which you or clients choose fonts for a project.&lt;/p&gt;
+&lt;p&gt;In contrast, my paper submission with Scott and Joel was far more successful because Scott was an insider who had previously published and reviewed many papers in the HCI conference where we submitted our paper. Of course, being an insider didn&amp;#39;t mean that our paper was scrutinized any less rigorously, since that would be unfair. However, Scott could leverage his experience to present our project&amp;#39;s motivations and findings in a way that was the most palatable to those sorts of reviewers, thereby raising our paper&amp;#39;s chances of acceptance.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;You could cut and paste the first paragraph of this article over and over, or download one of the Lorem ipsum text files I created. The first is simply 3 variations of the same paragraph repeated over and over. The second is 10 unique paragraphs of varying length. Right click (PC) or click/hold (Mac) on the link then save the plain text file to your hard drive. Or click on the link and choose &amp;quot;Save&amp;quot; in your browser. See the links at the end of this article for more variations on the lorem ipsum placeholder text.&lt;/p&gt;
+&lt;p&gt;Thus before submitting a conference paper, it seems important to consult someone who has at least successfully pusblished a paper in that conference. It takes some time to tune the paper in order to satisfy the taste of the reviewers, so better early than late.&lt;/p&gt;
 
-    &lt;div class="post-tags"&gt;
-      &lt;a href="/tags#tagone-ref"&gt;tagone&lt;/a&gt;
-      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo&lt;/a&gt;
-      &lt;a href="/tags#tagthree-ref"&gt;tagthree&lt;/a&gt;
-      &lt;a href="/tags#tagfour-ref"&gt;tagfour&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="comments"&gt;
-&lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;p&gt;Throughout the memoir, perhaps the most precious thing I learned is the importance of &lt;strong&gt;connection&lt;/strong&gt;. Philip shows strong initiative and always seek advice and oppotunities from his colleagues and professors. The network enables him to gain an intern position at MSR, to find potential users of his software, to speak at Google Tech Talk, to pursue an visit to Harvard, and much more. Therefore building connection and making use of it is a key source to success. Philip also explains how in the epilogue:&lt;/p&gt;
 
-&lt;/div&gt;
- 
+&lt;blockquote&gt;
+&lt;p&gt;giving talks, chatting with colleagues, asking for and offering help, and expressing gratitude&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;/div&gt;
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint ";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
-      <title>What If i was caught drinking when i was driving?</title>
-      <link>http://blog.charlesgao.com//2012/07/28/what-if-i-was-caught-drinking-when-i-was-driving.html</link>
-      <pubDate>2012-07-28</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;What If i was caught drinking when i was driving?&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.08672670823135864" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5989710631667833" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;p&gt;I think what hinders me from creating my connections is the lack of a good habit of consulting others. When encountering problems, I always attempt to solve them by myself, and seldom seek help from others. Asking for advice is of no harm. Instead it creates serendipities and boosts relationships. A very important point to remember.&lt;/p&gt;
 
-
-  &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
-    &lt;script type='text/x-mathjax-config'&gt;
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$','$'], ['\\(','\\)']],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-    });
-    MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i &lt; all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-    });
-    &lt;/script&gt;
-    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body onLoad="init();"&gt;
-
-    &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
-      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
-    &lt;/div&gt;
-
-    &lt;div class="content"&gt;
-      &lt;div class="post"&gt;
-  &lt;div class="title"&gt;&lt;a href=""&gt;What If i was caught drinking when i was driving?&lt;/a&gt; &lt;span class="date"&gt;2012-07-28&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
-  &lt;div&gt;
-  &lt;p&gt;Awesome&lt;/p&gt;
-
-&lt;pre class="prettyprint"&gt;
-#include &amp;lt;iostream&amp;gt;
-using namespace std;
-int main(){
-    
-}
-&lt;/pre&gt;
-
-&lt;p&gt;what the fuck?&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#39;t know why there is indent&lt;/p&gt;
+&lt;p&gt;In spite of the successful graduation, Philip chose to quit academia and is now working at Google.His strong initiative and good working habits will certainly push himself towards future success. Anyway, thanks for the great book, Philip!&lt;/p&gt;
 
     &lt;div class="post-tags"&gt;
-      &lt;a href="/tags#tagone-ref"&gt;tagone&lt;/a&gt;
-      &lt;a href="/tags#tagtwo-ref"&gt;tagtwo&lt;/a&gt;
+      &lt;a href="/tags#reading-ref"&gt;reading&lt;/a&gt;
+      &lt;a href="/tags#academia-ref"&gt;academia&lt;/a&gt;
+      &lt;a href="/tags#research-ref"&gt;research&lt;/a&gt;
+      &lt;a href="/tags#connection-ref"&gt;connection&lt;/a&gt;
+      &lt;a href="/tags#the Ph.D. Grind-ref"&gt;the Ph.D. Grind&lt;/a&gt;
+      &lt;a href="/tags#Philip J. Guo-ref"&gt;Philip J. Guo&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
