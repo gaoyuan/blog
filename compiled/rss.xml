@@ -3,7 +3,139 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-07-31 20:54:30 -0700</pubDate>
+    <pubDate>2012-08-17 23:49:09 -0700</pubDate>
+    <item>
+      <title>One Liners For Text Processing</title>
+      <link>http://blog.charlesgao.com//2012/08/17/one-liners-for-text-processing.html</link>
+      <pubDate>2012-08-17</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6042179195213608" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9068721684075634" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onLoad="init();"&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+      &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;One Liners For Text Processing&lt;/a&gt; &lt;span class="date"&gt;2012-08-17&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;p&gt;I&amp;#39;m currently playing with the &lt;a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict"&gt;CMU Pronouncing Dictionary&lt;/a&gt;, which is a word-pronunciation dictionary that contains more than 100,000 items. I&amp;#39;ve learned some text processing techniques in dealing with the massive amount of data, which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.&lt;/p&gt;
+
+&lt;p&gt;The first tool is &lt;em&gt;tr&lt;/em&gt;, which can translate some chars into other chars. As far as I know, it does not support regex. For example, below is a segment of the n-gram counts of the phonemes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;lt;s&amp;gt; T UH SH 1&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;s&amp;gt; T AE    71&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;s&amp;gt; T AE B  8&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;s&amp;gt; T AE N  9&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;s&amp;gt; T AE K  19&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What if I want to keep only the numbers? The following command should work:&lt;/p&gt;
+
+&lt;pre&gt; tr -cd '[:digit:]\n' &amp;lt; inputfile &lt;/pre&gt;
+
+&lt;p&gt;That means we delete(-d) all the chars except(-c) the numbers([:digit:], which is same as [0-9]) and line break(\n).&lt;/p&gt;
+
+&lt;p&gt;For the the same task we may also use the following &lt;em&gt;perl&lt;/em&gt; command:&lt;/p&gt;
+
+&lt;pre&gt; perl -i -pe 's/[^0-9\n]//g' inputfile &lt;/pre&gt;
+
+&lt;p&gt;The -i argument means in-place edit, so the inputfile will simply be changed. You can write -i.bak to keep a backup, or simply ignore this option and the result will be displayed in the terminal. The -e argument makes perl code to execute on the command line. And the -p ensures the command to be executed per line. In princple, you can write any valid perl command in the quote. That implies, for instance, you can specify the substitution to happen conditionally on those lines that you desire.&lt;/p&gt;
+
+&lt;p&gt;Instead of using perl, we can simply use &lt;em&gt;sed&lt;/em&gt; almost the same way. Sed is especially designed to do substitution, as its name suggests.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;sort&lt;/em&gt; command can sort the files by lines, with the -n argument for numerical sorting and -r for descending order. The -k option specify which column to sort. Quite convenient.&lt;/p&gt;
+
+&lt;p&gt;Another powerful command is &lt;em&gt;awk&lt;/em&gt;. For example, you can obtain the sum of the first column of all the lines in a file by a one liner:&lt;/p&gt;
+
+&lt;pre&gt; awk '{s+=$1} END {print s}' inputfile &lt;/pre&gt;
+
+&lt;p&gt;Some other command line tools are also very helpful:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;cat: display files (cat filename), set up a sketch (cat &amp;gt;&amp;gt; filename), or concatenate multiple files (cat file1 file2).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wc: count the lines, words and chars of a file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;paste: paste multiple files line by line.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;div class="post-tags"&gt;
+      &lt;a href="/tags#one liner-ref"&gt;one liner&lt;/a&gt;
+      &lt;a href="/tags#coding-ref"&gt;coding&lt;/a&gt;
+      &lt;a href="/tags#unix-ref"&gt;unix&lt;/a&gt;
+      &lt;a href="/tags#text processing-ref"&gt;text processing&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+    &lt;/div&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>Keep Going -- Reading the Ph.D. Grind</title>
       <link>http://blog.charlesgao.com//2012/07/31/keep-going-reading-the-ph-d-grind.html</link>
@@ -13,8 +145,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5139334418632108" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03110864750452147" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.33858097545633736" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6700289843074231" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
