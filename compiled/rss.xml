@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-08-18 00:38:23 -0700</pubDate>
+    <pubDate>2012-08-28 01:26:05 -0700</pubDate>
     <item>
       <title>One Liners For Text Processing</title>
       <link>http://blog.charlesgao.com//2012/08/17/one-liners-for-text-processing.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.939621329082995" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4861469439298617" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.54537493868975" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2215742307502151" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -51,7 +51,7 @@
       &lt;div class="post"&gt;
   &lt;div class="title"&gt;&lt;a href=""&gt;One Liners For Text Processing&lt;/a&gt; &lt;span class="date"&gt;2012-08-17&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;I&amp;#39;m currently playing with the &lt;a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict"&gt;CMU Pronouncing Dictionary&lt;/a&gt;, which is a word-pronunciation dictionary that contains more than 100,000 items. I&amp;#39;ve learned some text processing techniques in dealing with the massive amount of data, which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.&lt;/p&gt;
+  &lt;p&gt;I&amp;#39;m currently playing with the &lt;a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict"&gt;CMU Pronouncing Dictionary&lt;/a&gt;, which is a word-pronunciation dictionary that contains more than 100,000 items. In dealing with the massive amount of data, I&amp;#39;ve learned some text processing techniques which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.&lt;/p&gt;
 
 &lt;p&gt;The first tool is &lt;em&gt;tr&lt;/em&gt;, which can translate some chars into other chars. As far as I know, it does not support regex. For example, below is a segment of the n-gram counts of the phonemes:&lt;/p&gt;
 
@@ -94,6 +94,71 @@
 &lt;li&gt;&lt;p&gt;wc: count the lines, words and chars of a file.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;paste: paste multiple files line by line.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Below is a piece of code I wrote this afternoon for exploring phoneme and character feature representation of each word. The program &lt;em&gt;ngram-count&lt;/em&gt; generates all the ngrams based on the training text. Only the CMU dictionary is required as an input, and the code outputs a sparse matrix representation of each word, in terms of phoneme features and character features respectively.&lt;/p&gt;
+
+&lt;pre&gt;
+#!/bin/sh
+#--Generate phone and char feature representations.--
+#Using ngram-count
+#Removing unigram features and features below threshold.
+
+# == Generate features(sorted by frequency) ==
+
+# --
+echo 'Generating phoneme features ...'
+
+sed '/\;\;\;/d;s/.*  //g' cmudict.0.7a.txt &gt; PH # phone-only
+
+cat PH | ngram-count -text - -order 4 | \
+awk 'BEGIN{FS=" "; OFS="|"}{print $NF, $0}' | sort -n -r -t'|' -k1 | \
+awk 'int($1) &gt;=10' | cut -d'|' -f2 | rev | cut -f2- | rev | grep ' ' &gt; PH_F
+
+PH_SIZE=`cat PH_F | wc -l | cut -d' ' -f1`
+echo "$PH_SIZE phoneme features generated."
+# --
+echo 'Generating character features ...'
+
+sed '/\;\;\;/d;s/  .*//g;/[^A-Za-z]/d' cmudict.0.7a.txt | uniq | \
+sed 's/./ &amp;/g;s/^ //' &gt; CH # char-only
+
+cat CH | ngram-count -text - -order 4 | \
+awk 'BEGIN{FS=" "; OFS="|"}{print $NF, $0}' | sort -n -r -t'|' -k1 | \
+awk 'int($1) &gt;=10' | cut -d'|' -f2 | rev | cut -f2- | rev | grep ' ' &gt; CH_F
+
+CH_SIZE=`cat CH_F | wc -l | cut -d' ' -f1`
+echo "$CH_SIZE character features generated."
+# --
+
+# == Get feature representations ==
+
+rm -f ph_sp ch_sp # clear if exists
+
+cat cmudict.0.7a.txt | grep -v '[^A-Za-z0-9 ]' &gt; CHPH # char-phone dict
+
+CNT=1 # loop counter
+
+while IFS= read -r line; do
+  # phone
+  echo "$line" | sed 's/.*  //g' | ngram-count -text - -order 4 | \
+   rev | cut -f2- | rev | grep ' ' &gt; TMP;
+  diff --unchanged-group-format=''$CNT' %df 1|' --old-group-format='' \
+   --new-group-format='' --changed-group-format='' PH_F TMP | \
+   sed 's/|/\n/g' &gt;&gt; ph_sp
+  # char
+  echo "$line" | sed 's/  .*//g' | sed 's/./ &amp;/g;s/^ //' | \
+   ngram-count -text - -order 4 | rev | cut -f2- | rev | grep ' ' &gt; TMP;
+  diff --unchanged-group-format=''$CNT' %df 1|' --old-group-format='' \
+   --new-group-format='' --changed-group-format='' CH_F TMP | \
+   sed 's/|/\n/g' &gt;&gt; ch_sp
+  # counter++
+  CNT=`expr $CNT + 1`
+done &lt; CHPH
+
+# == Remove temp files ==
+
+rm CH CH_F PH PH_F CHPH TMP
+&lt;/pre&gt;
 
     &lt;div class="post-tags"&gt;
       &lt;a href="/tags#one liner-ref"&gt;one liner&lt;/a&gt;
@@ -145,8 +210,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6059883388007936" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5806005888792583" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3499561737671699" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5690326295618019" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;

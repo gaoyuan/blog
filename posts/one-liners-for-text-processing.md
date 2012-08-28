@@ -10,7 +10,7 @@ tags:
   - text processing
 ---
 
-I'm currently playing with the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict), which is a word-pronunciation dictionary that contains more than 100,000 items. I've learned some text processing techniques in dealing with the massive amount of data, which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.
+I'm currently playing with the [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict), which is a word-pronunciation dictionary that contains more than 100,000 items. In dealing with the massive amount of data, I've learned some text processing techniques which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.
 
 The first tool is *tr*, which can translate some chars into other chars. As far as I know, it does not support regex. For example, below is a segment of the n-gram counts of the phonemes:
 
@@ -51,3 +51,68 @@ Some other command line tools are also very helpful:
 * wc: count the lines, words and chars of a file.
 
 * paste: paste multiple files line by line.
+
+Below is a piece of code I wrote this afternoon for exploring phoneme and character feature representation of each word. The program *ngram-count* generates all the ngrams based on the training text. Only the CMU dictionary is required as an input, and the code outputs a sparse matrix representation of each word, in terms of phoneme features and character features respectively.
+
+<pre>
+#!/bin/sh
+#--Generate phone and char feature representations.--
+#Using ngram-count
+#Removing unigram features and features below threshold.
+
+# == Generate features(sorted by frequency) ==
+
+# --
+echo 'Generating phoneme features ...'
+
+sed '/\;\;\;/d;s/.*  //g' cmudict.0.7a.txt > PH # phone-only
+
+cat PH | ngram-count -text - -order 4 | \
+awk 'BEGIN{FS=" "; OFS="|"}{print $NF, $0}' | sort -n -r -t'|' -k1 | \
+awk 'int($1) >=10' | cut -d'|' -f2 | rev | cut -f2- | rev | grep ' ' > PH_F
+
+PH_SIZE=`cat PH_F | wc -l | cut -d' ' -f1`
+echo "$PH_SIZE phoneme features generated."
+# --
+echo 'Generating character features ...'
+
+sed '/\;\;\;/d;s/  .*//g;/[^A-Za-z]/d' cmudict.0.7a.txt | uniq | \
+sed 's/./ &/g;s/^ //' > CH # char-only
+
+cat CH | ngram-count -text - -order 4 | \
+awk 'BEGIN{FS=" "; OFS="|"}{print $NF, $0}' | sort -n -r -t'|' -k1 | \
+awk 'int($1) >=10' | cut -d'|' -f2 | rev | cut -f2- | rev | grep ' ' > CH_F
+
+CH_SIZE=`cat CH_F | wc -l | cut -d' ' -f1`
+echo "$CH_SIZE character features generated."
+# --
+
+# == Get feature representations ==
+
+rm -f ph_sp ch_sp # clear if exists
+
+cat cmudict.0.7a.txt | grep -v '[^A-Za-z0-9 ]' > CHPH # char-phone dict
+
+CNT=1 # loop counter
+
+while IFS= read -r line; do
+  # phone
+  echo "$line" | sed 's/.*  //g' | ngram-count -text - -order 4 | \
+   rev | cut -f2- | rev | grep ' ' > TMP;
+  diff --unchanged-group-format=''$CNT' %df 1|' --old-group-format='' \
+   --new-group-format='' --changed-group-format='' PH_F TMP | \
+   sed 's/|/\n/g' >> ph_sp
+  # char
+  echo "$line" | sed 's/  .*//g' | sed 's/./ &/g;s/^ //' | \
+   ngram-count -text - -order 4 | rev | cut -f2- | rev | grep ' ' > TMP;
+  diff --unchanged-group-format=''$CNT' %df 1|' --old-group-format='' \
+   --new-group-format='' --changed-group-format='' CH_F TMP | \
+   sed 's/|/\n/g' >> ch_sp
+  # counter++
+  CNT=`expr $CNT + 1`
+done < CHPH
+
+# == Remove temp files ==
+
+rm CH CH_F PH PH_F CHPH TMP
+</pre>
