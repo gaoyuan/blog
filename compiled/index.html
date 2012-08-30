@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Shitty Blog</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.5718140576938934" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6892648819827526" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.6490600405075022" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7544269189091477" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,43 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-p3.html">Practice Qual Summer 2010 P3</a> <span class="date">2012-08-30</span></h3>
+
+  <blockquote>
+<p>Consider the ordinary differential equation
+\begin{equation}
+\frac{dy}{dt} = -100y
+\end{equation}
+Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
+</blockquote>
+
+<ul>
+<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
+<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
+</ul>
+
+<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
+
+<p><img src="/assets/media/fig1.png" alt=""></p>
+
+<p>If we set $h &gt; 0.02$, it will be like</p>
+
+<p><img src="/assets/media/fig2.png" alt=""></p>
+
+<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
+
+<p><img src="/assets/media/fig3.png" alt=""></p>
+
+<p>If we set $h$ small enough, we get the correct behavior</p>
+
+<p><img src="/assets/media/fig4.png" alt=""></p>
+
+
+  <div class="more">
+    <a href="/2012/08/30/practice-qual-summer-2010-p3.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2012/08/17/one-liners-for-text-processing.html">One Liners For Text Processing</a> <span class="date">2012-08-17</span></h3>
 
   <p>I&#39;m currently playing with the <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">CMU Pronouncing Dictionary</a>, which is a word-pronunciation dictionary that contains more than 100,000 items. In dealing with the massive amount of data, I&#39;ve learned some text processing techniques which I think is quite useful because these kinds of tasks, i.e. processing data, are frequently encountered, and being efficient in text manipulation will certainly save our lives.</p>
