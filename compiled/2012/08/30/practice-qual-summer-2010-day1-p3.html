@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Practice Qual Summer 2010 Day1 P3</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.7271024877906743" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.07186294319632258" type="text/css" rel="stylesheet" media="all">
+
+
+  <script>
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
+    <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body onLoad="init();">
+
+    <div class="blog-title">
+      <h1><a href="/">SHITTY BLOG</a></h1>
+      <h3>Yet another blog of Charles Gao.</h3>
+    </div>
+
+    <div class="content">
+      <div class="post">
+  <div class="title"><a href="">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3></div>
+  <div>
+  <blockquote>
+<p>Consider the ordinary differential equation
+\begin{equation}
+\frac{dy}{dt} = -100y
+\end{equation}
+Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
+</blockquote>
+
+<ul>
+<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
+<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
+</ul>
+
+<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
+
+<p><img src="/assets/media/fig1.png" alt=""></p>
+
+<p>If we set $h &gt; 0.02$, it will be like</p>
+
+<p><img src="/assets/media/fig2.png" alt=""></p>
+
+<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
+
+<p><img src="/assets/media/fig3.png" alt=""></p>
+
+<p>If we set $h$ small enough, we get the correct behavior</p>
+
+<p><img src="/assets/media/fig4.png" alt=""></p>
+
+    <div class="post-tags">
+      <a href="/tags#quals-ref">quals</a>
+      <a href="/tags#numerical methods-ref">numerical methods</a>
+      <a href="/tags#forward Euler-ref">forward Euler</a>
+      <a href="/tags#backward Euler-ref">backward Euler</a>
+    </div>
+  </div>
+</div>
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+ 
+
+    </div>
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+</body>
+</html>

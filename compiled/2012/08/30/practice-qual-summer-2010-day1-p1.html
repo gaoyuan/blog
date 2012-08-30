@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Practice Qual Summer 2010 Day1 P1</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.977212804093459" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5762059855525755" type="text/css" rel="stylesheet" media="all">
+
+
+  <script>
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
+    <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body onLoad="init();">
+
+    <div class="blog-title">
+      <h1><a href="/">SHITTY BLOG</a></h1>
+      <h3>Yet another blog of Charles Gao.</h3>
+    </div>
+
+    <div class="content">
+      <div class="post">
+  <div class="title"><a href="">Practice Qual Summer 2010 Day1 P1</a> <span class="date">2012-08-30</span></h3></div>
+  <div>
+  <blockquote>
+<p>Consider the following nonlinear system:
+\begin{equation}
+\cases{
+    x&#39; = y + x^2y\cr
+    y&#39; = -x + 2xy
+}
+\end{equation}
+Find the fixed points of this system. Determine their stability. Assuming that there are no limit cycles, give a sketch of the phase portrait of the nonlinear system (Put this sketch on a separate page, and make it BIG). If you encounter marginal cases for the fixed points, assume that the linearization gives you the correct result.</p>
+</blockquote>
+
+<p>By setting $x&#39; = y&#39; = 0$, we get the only possible fixed point $(0, 0)$. The Jacobian of the vector field $(y + x^2y, -x + 2xy)$ is
+\begin{equation}
+\left(
+\begin{matrix}
+    2xy &amp; 1 + x^2 \cr
+    -1 + 2y &amp; 2x
+\end{matrix}
+\right)
+\end{equation}
+At the origin, the Jacobian becomes
+\begin{equation}
+\left(
+\begin{matrix}
+    0 &amp; 1\cr
+    -1 &amp; 0
+\end{matrix}
+\right)
+\end{equation}
+The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say it is stable or unstable. By plotting the vector field around the origin, we can see that it is a center.</p>
+
+<p><img src="/assets/media/fig5.png" width=600px height=600px /></p>
+
+<p>Note that when $y = 1/2$, $y&#39; = 0$. Therefore if you start with a state with $y \ge 1/2$, you will never be absorbed into the origin. This can be seen if we plot the vector field in a larger domain.</p>
+
+<p><img src="/assets/media/fig6.png" width=600px height=600px /></p>
+
+    <div class="post-tags">
+      <a href="/tags#quals-ref">quals</a>
+      <a href="/tags#dynamical system-ref">dynamical system</a>
+      <a href="/tags#fixed point-ref">fixed point</a>
+      <a href="/tags#stability-ref">stability</a>
+    </div>
+  </div>
+</div>
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+ 
+
+    </div>
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+</body>
+</html>

@@ -3,18 +3,18 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-08-30 14:00:25 -0700</pubDate>
+    <pubDate>2012-08-30 16:55:07 -0700</pubDate>
     <item>
-      <title>Practice Qual Summer 2010 P3</title>
-      <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-p3.html</link>
+      <title>Practice Qual Summer 2010 Day1 P3</title>
+      <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p3.html</link>
       <pubDate>2012-08-30</pubDate>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Practice Qual Summer 2010 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9162726163867617" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8711935561370037" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7760189643986659" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.33738839949218014" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -49,7 +49,7 @@
 
     &lt;div class="content"&gt;
       &lt;div class="post"&gt;
-  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 P3&lt;/a&gt; &lt;span class="date"&gt;2012-08-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P3&lt;/a&gt; &lt;span class="date"&gt;2012-08-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
   &lt;blockquote&gt;
 &lt;p&gt;Consider the ordinary differential equation
@@ -122,6 +122,131 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 </description>
     </item>
     <item>
+      <title>Practice Qual Summer 2010 Day1 P1</title>
+      <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p1.html</link>
+      <pubDate>2012-08-30</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3527023346213295" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.28634538104702556" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onLoad="init();"&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+      &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P1&lt;/a&gt; &lt;span class="date"&gt;2012-08-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;blockquote&gt;
+&lt;p&gt;Consider the following nonlinear system:
+\begin{equation}
+\cases{
+    x&amp;#39; = y + x^2y\cr
+    y&amp;#39; = -x + 2xy
+}
+\end{equation}
+Find the fixed points of this system. Determine their stability. Assuming that there are no limit cycles, give a sketch of the phase portrait of the nonlinear system (Put this sketch on a separate page, and make it BIG). If you encounter marginal cases for the fixed points, assume that the linearization gives you the correct result.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By setting $x&amp;#39; = y&amp;#39; = 0$, we get the only possible fixed point $(0, 0)$. The Jacobian of the vector field $(y + x^2y, -x + 2xy)$ is
+\begin{equation}
+\left(
+\begin{matrix}
+    2xy &amp;amp; 1 + x^2 \cr
+    -1 + 2y &amp;amp; 2x
+\end{matrix}
+\right)
+\end{equation}
+At the origin, the Jacobian becomes
+\begin{equation}
+\left(
+\begin{matrix}
+    0 &amp;amp; 1\cr
+    -1 &amp;amp; 0
+\end{matrix}
+\right)
+\end{equation}
+The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say it is stable or unstable. By plotting the vector field around the origin, we can see that it is a center.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig5.png" width=600px height=600px /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that when $y = 1/2$, $y&amp;#39; = 0$. Therefore if you start with a state with $y \ge 1/2$, you will never be absorbed into the origin. This can be seen if we plot the vector field in a larger domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig6.png" width=600px height=600px /&gt;&lt;/p&gt;
+
+    &lt;div class="post-tags"&gt;
+      &lt;a href="/tags#quals-ref"&gt;quals&lt;/a&gt;
+      &lt;a href="/tags#dynamical system-ref"&gt;dynamical system&lt;/a&gt;
+      &lt;a href="/tags#fixed point-ref"&gt;fixed point&lt;/a&gt;
+      &lt;a href="/tags#stability-ref"&gt;stability&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+    &lt;/div&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
       <title>One Liners For Text Processing</title>
       <link>http://blog.charlesgao.com//2012/08/17/one-liners-for-text-processing.html</link>
       <pubDate>2012-08-17</pubDate>
@@ -130,8 +255,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.03606847625843124" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8795679703355586" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.808043305893267" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.15094205373747427" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -327,8 +452,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9726703308341675" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6586456895876452" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1500051256525715" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.774339137851105" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;

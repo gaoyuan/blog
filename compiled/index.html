@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Shitty Blog</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.6490600405075022" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7544269189091477" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.006852298996144035" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0780723016355217" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,7 +39,7 @@
 
     <div class="content">
       <div class="post">
-  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-p3.html">Practice Qual Summer 2010 P3</a> <span class="date">2012-08-30</span></h3>
+  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
 
   <blockquote>
 <p>Consider the ordinary differential equation
@@ -72,7 +72,46 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 
 
   <div class="more">
-    <a href="/2012/08/30/practice-qual-summer-2010-p3.html" class="btn">Read more or comment..</a>
+    <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
+  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html">Practice Qual Summer 2010 Day1 P1</a> <span class="date">2012-08-30</span></h3>
+
+  <blockquote>
+<p>Consider the following nonlinear system:
+\begin{equation}
+\cases{
+    x&#39; = y + x^2y\cr
+    y&#39; = -x + 2xy
+}
+\end{equation}
+Find the fixed points of this system. Determine their stability. Assuming that there are no limit cycles, give a sketch of the phase portrait of the nonlinear system (Put this sketch on a separate page, and make it BIG). If you encounter marginal cases for the fixed points, assume that the linearization gives you the correct result.</p>
+</blockquote>
+
+<p>By setting $x&#39; = y&#39; = 0$, we get the only possible fixed point $(0, 0)$. The Jacobian of the vector field $(y + x^2y, -x + 2xy)$ is
+\begin{equation}
+\left(
+\begin{matrix}
+    2xy &amp; 1 + x^2 \cr
+    -1 + 2y &amp; 2x
+\end{matrix}
+\right)
+\end{equation}
+At the origin, the Jacobian becomes
+\begin{equation}
+\left(
+\begin{matrix}
+    0 &amp; 1\cr
+    -1 &amp; 0
+\end{matrix}
+\right)
+\end{equation}
+The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say it is stable or unstable. By plotting the vector field around the origin, we can see that it is a center.</p>
+
+
+  <div class="more">
+    <a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html" class="btn">Read more or comment..</a>
   </div>
 </div>
 <div class="post">
