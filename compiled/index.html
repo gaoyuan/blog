@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Shitty Blog</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.006852298996144035" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0780723016355217" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.4039615499089845" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7813297709515377" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,41 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2012/09/02/practice-qual-summer-2010-day1-p2.html">Practice Qual Summer 2010 Day1 P2</a> <span class="date">2012-09-02</span></h3>
+
+  <blockquote>
+<p>Define the inner product of two functions $f(x)$ and $g(x)$ defined on the interval [0,1] by
+\begin{equation}
+\langle f,g \rangle = \int_0^1 f(x)g(x)dx
+\end{equation}
+We say $f$ and $g$ are orthogonal if $\langle f,g \rangle = 0$.
+Let $\mathcal{P}$ be the space of cubic polynomials $p(x)$ satisfying $p(1)=p&#39;(1)=0$. This is a two-dimensional linear function space. Determine an orthogonal basis for this space with respect to the inner product above. Note: Orthogonal is enough, it need not be orthonormal.</p>
+</blockquote>
+
+<p>First we find two vectors in the space and then we use Gram-Schmidt process to orthogonalize them. </p>
+
+<p>The general way of finding the two vectors are to assume its form $p(x)=ax^3+bx^2+cx+d$. The two conditions $p(1)=p&#39;(1)=0$ gives us two constrains so that only two variables among $a,b,c$ and $d$ are flexible. That is also the reason why the space is two dimensional. We have
+\begin{equation}
+\cases{
+    a + b + c + d = 0\cr
+    3a + 2b + c = 0
+}
+\end{equation}
+We find two linear independent solutions
+\begin{equation}
+\cases{
+    p_1(x) = x^3 - 2x^2 + x\cr
+    p_2(x) = 2x^3 - 3x^2 + 1
+}
+\end{equation}
+There are other ways to come up with the two vectors. For example, by observation $x-1$ is also in the space.</p>
+
+
+  <div class="more">
+    <a href="/2012/09/02/practice-qual-summer-2010-day1-p2.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
 
   <blockquote>

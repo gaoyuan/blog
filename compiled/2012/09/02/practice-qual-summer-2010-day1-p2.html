@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Practice Qual Summer 2010 Day1 P2</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.4935024408485107" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.14286897893656758" type="text/css" rel="stylesheet" media="all">
+
+
+  <script>
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
+    <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body onLoad="init();">
+
+    <div class="blog-title">
+      <h1><a href="/">SHITTY BLOG</a></h1>
+      <h3>Yet another blog of Charles Gao.</h3>
+    </div>
+
+    <div class="content">
+      <div class="post">
+  <div class="title"><a href="">Practice Qual Summer 2010 Day1 P2</a> <span class="date">2012-09-02</span></h3></div>
+  <div>
+  <blockquote>
+<p>Define the inner product of two functions $f(x)$ and $g(x)$ defined on the interval [0,1] by
+\begin{equation}
+\langle f,g \rangle = \int_0^1 f(x)g(x)dx
+\end{equation}
+We say $f$ and $g$ are orthogonal if $\langle f,g \rangle = 0$.
+Let $\mathcal{P}$ be the space of cubic polynomials $p(x)$ satisfying $p(1)=p&#39;(1)=0$. This is a two-dimensional linear function space. Determine an orthogonal basis for this space with respect to the inner product above. Note: Orthogonal is enough, it need not be orthonormal.</p>
+</blockquote>
+
+<p>First we find two vectors in the space and then we use Gram-Schmidt process to orthogonalize them. </p>
+
+<p>The general way of finding the two vectors are to assume its form $p(x)=ax^3+bx^2+cx+d$. The two conditions $p(1)=p&#39;(1)=0$ gives us two constrains so that only two variables among $a,b,c$ and $d$ are flexible. That is also the reason why the space is two dimensional. We have
+\begin{equation}
+\cases{
+    a + b + c + d = 0\cr
+    3a + 2b + c = 0
+}
+\end{equation}
+We find two linear independent solutions
+\begin{equation}
+\cases{
+    p_1(x) = x^3 - 2x^2 + x\cr
+    p_2(x) = 2x^3 - 3x^2 + 1
+}
+\end{equation}
+There are other ways to come up with the two vectors. For example, by observation $x-1$ is also in the space.</p>
+
+<p>Anyway, we will project $p_2(x)$ onto $p_1(x)$ and then substract that part from $p_2(x)$ to get a vector that is still in the space and is orthogonal to $p_1(x)$. This is done by
+\begin{equation}
+p_3(x) = p_2(x) - \frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = -\frac{7}{2}x^3+8x^2+1-\frac{11}{2}x
+\end{equation}
+One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.</p>
+
+<p>Note: Denote the angle between $p_1(x)$ and $p_2(x)$ as $\theta$. Then $|p_2|cos\theta\vec{e}$ is the projection of $p_2(x)$ onto $p_1(x)$, where $\vec{e}$ is the unit vector with the same direction as $p_1(x)$. 
+\begin{equation}
+\frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = \frac{|p_1||p_2|cos\theta}{|p_1|^2}p_1 = |p_2|cos\theta\vec{e}
+\end{equation}</p>
+
+    <div class="post-tags">
+      <a href="/tags#quals-ref">quals</a>
+      <a href="/tags#Gram-Schmidt process-ref">Gram-Schmidt process</a>
+      <a href="/tags#vector space-ref">vector space</a>
+      <a href="/tags#orthogonal-ref">orthogonal</a>
+    </div>
+  </div>
+</div>
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+ 
+
+    </div>
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+</body>
+</html>

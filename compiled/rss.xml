@@ -3,7 +3,133 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-08-30 16:55:07 -0700</pubDate>
+    <pubDate>2012-09-02 11:44:31 -0700</pubDate>
+    <item>
+      <title>Practice Qual Summer 2010 Day1 P2</title>
+      <link>http://blog.charlesgao.com//2012/09/02/practice-qual-summer-2010-day1-p2.html</link>
+      <pubDate>2012-09-02</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9380052266866616" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03308083133849682" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onLoad="init();"&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+      &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P2&lt;/a&gt; &lt;span class="date"&gt;2012-09-02&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;blockquote&gt;
+&lt;p&gt;Define the inner product of two functions $f(x)$ and $g(x)$ defined on the interval [0,1] by
+\begin{equation}
+\langle f,g \rangle = \int_0^1 f(x)g(x)dx
+\end{equation}
+We say $f$ and $g$ are orthogonal if $\langle f,g \rangle = 0$.
+Let $\mathcal{P}$ be the space of cubic polynomials $p(x)$ satisfying $p(1)=p&amp;#39;(1)=0$. This is a two-dimensional linear function space. Determine an orthogonal basis for this space with respect to the inner product above. Note: Orthogonal is enough, it need not be orthonormal.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;First we find two vectors in the space and then we use Gram-Schmidt process to orthogonalize them. &lt;/p&gt;
+
+&lt;p&gt;The general way of finding the two vectors are to assume its form $p(x)=ax^3+bx^2+cx+d$. The two conditions $p(1)=p&amp;#39;(1)=0$ gives us two constrains so that only two variables among $a,b,c$ and $d$ are flexible. That is also the reason why the space is two dimensional. We have
+\begin{equation}
+\cases{
+    a + b + c + d = 0\cr
+    3a + 2b + c = 0
+}
+\end{equation}
+We find two linear independent solutions
+\begin{equation}
+\cases{
+    p_1(x) = x^3 - 2x^2 + x\cr
+    p_2(x) = 2x^3 - 3x^2 + 1
+}
+\end{equation}
+There are other ways to come up with the two vectors. For example, by observation $x-1$ is also in the space.&lt;/p&gt;
+
+&lt;p&gt;Anyway, we will project $p_2(x)$ onto $p_1(x)$ and then substract that part from $p_2(x)$ to get a vector that is still in the space and is orthogonal to $p_1(x)$. This is done by
+\begin{equation}
+p_3(x) = p_2(x) - \frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = -\frac{7}{2}x^3+8x^2+1-\frac{11}{2}x
+\end{equation}
+One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
+
+&lt;p&gt;Note: Denote the angle between $p_1(x)$ and $p_2(x)$ as $\theta$. Then $|p_2|cos\theta\vec{e}$ is the projection of $p_2(x)$ onto $p_1(x)$, where $\vec{e}$ is the unit vector with the same direction as $p_1(x)$. 
+\begin{equation}
+\frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = \frac{|p_1||p_2|cos\theta}{|p_1|^2}p_1 = |p_2|cos\theta\vec{e}
+\end{equation}&lt;/p&gt;
+
+    &lt;div class="post-tags"&gt;
+      &lt;a href="/tags#quals-ref"&gt;quals&lt;/a&gt;
+      &lt;a href="/tags#Gram-Schmidt process-ref"&gt;Gram-Schmidt process&lt;/a&gt;
+      &lt;a href="/tags#vector space-ref"&gt;vector space&lt;/a&gt;
+      &lt;a href="/tags#orthogonal-ref"&gt;orthogonal&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+    &lt;/div&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>Practice Qual Summer 2010 Day1 P3</title>
       <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p3.html</link>
@@ -13,8 +139,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7760189643986659" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.33738839949218014" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5050094793404876" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5519965208614772" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -130,8 +256,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3527023346213295" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.28634538104702556" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7211952028024131" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9877515159857689" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -255,8 +381,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.808043305893267" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.15094205373747427" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9913269145467697" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2251921532515202" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -452,8 +578,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1500051256525715" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.774339137851105" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4541155335929171" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1847494137867286" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
