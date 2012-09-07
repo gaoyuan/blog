@@ -3,7 +3,125 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2012-09-02 11:44:31 -0700</pubDate>
+    <pubDate>2012-09-06 17:06:57 -0700</pubDate>
+    <item>
+      <title>Practice Qual Summer 2010 Day1 P4</title>
+      <link>http://blog.charlesgao.com//2012/09/06/practice-qual-summer-2010-day1-p4.html</link>
+      <pubDate>2012-09-06</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Practice Qual Summer 2010 Day1 P4&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7368031263360381" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6350621041995202" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onLoad="init();"&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+      &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P4&lt;/a&gt; &lt;span class="date"&gt;2012-09-06&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;blockquote&gt;
+&lt;p&gt;Assume that $k:[0,1]\times[0,1] \rightarrow \mathcal{R}$ is continuously differentiable and that $f:[0,1] \rightarrow \mathcal{R}$is continuous. Using the definition of the derivative, and the derivative with respect to $x$ of
+\begin{equation}
+F(x) = \int_0^x k(x,y)f(y)dy, x \in (0,1),
+\end{equation}
+As an example, let $k(x,y) = x^2y$ and $f(x)=x$. Calculate $F&amp;#39;(x)$ in two different ways: (i) using the formula you found, and (ii) by calculating $F(x)$ and taking a derivative.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By the definition of derivative,
+\begin{equation}
+F&amp;#39;(x) = \lim_{\epsilon\rightarrow 0}\frac{F(x+\epsilon)-F(x)}{\epsilon} = \left(\int_0^{x+\epsilon}k(x+\epsilon,y)f(y)dy - \int_0^x k(x,y)f(y)dy\right)/\epsilon
+\end{equation}
+\begin{equation}
+=\lim_{\epsilon\rightarrow 0}\left(\int_0^{x+\epsilon}k(x+\epsilon,y)f(y)dy - \int_0^{x+\epsilon}k(x,y)f(y)dy + \int_0^{x+\epsilon}k(x,y)f(y)dy - \int_0^x k(x,y)f(y)dy\right)/\epsilon
+\end{equation}
+\begin{equation}
+=\lim_{\epsilon\rightarrow 0}\left(\int_0^{x+\epsilon}\frac{k(x+\epsilon,y)-k(x,y)}{\epsilon} f(y)dy  + \frac{1}{\epsilon}\int_x^{x+\epsilon}k(x,y)f(y)dy \right) = \int_0^xk_x(x,y)f(y)dy + k(x,x)f(x)
+\end{equation}
+In the derivation above, we used the continuously differentiability of $k$ and the continuity of $f$ in exchanging the integral and limit at the second last step.&lt;/p&gt;
+
+&lt;p&gt;For the example $k(x,y)=x^2y$ and $f(x)=x$, we first use our formula:
+\begin{equation}
+\int_0^xk_x(x,y)f(y)dy + k(x,x)f(x) = \int_0^x2xy^2dy + x^4 = \frac{5}{3}x^4.
+\end{equation}
+If we calculate it directly, we get
+\begin{equation}
+\int_0^xk(x,y)f(y)dy = \int_0^xx^2y^2dy = \frac{1}{3}x^5. 
+\end{equation}
+Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same solution.&lt;/p&gt;
+
+    &lt;div class="post-tags"&gt;
+      &lt;a href="/tags#quals-ref"&gt;quals&lt;/a&gt;
+      &lt;a href="/tags#analysis-ref"&gt;analysis&lt;/a&gt;
+      &lt;a href="/tags#kernel-ref"&gt;kernel&lt;/a&gt;
+      &lt;a href="/tags#partial differentiation-ref"&gt;partial differentiation&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+    &lt;/div&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>Practice Qual Summer 2010 Day1 P2</title>
       <link>http://blog.charlesgao.com//2012/09/02/practice-qual-summer-2010-day1-p2.html</link>
@@ -13,8 +131,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9380052266866616" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03308083133849682" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9877922234412594" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5981606828123521" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -131,123 +249,6 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 </description>
     </item>
     <item>
-      <title>Practice Qual Summer 2010 Day1 P3</title>
-      <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p3.html</link>
-      <pubDate>2012-08-30</pubDate>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5050094793404876" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5519965208614772" type="text/css" rel="stylesheet" media="all"&gt;
-
-
-  &lt;script&gt;
-  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-&lt;/script&gt;
-    &lt;script type='text/x-mathjax-config'&gt;
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [['$','$'], ['\\(','\\)']],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-    });
-    MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i &lt; all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-    });
-    &lt;/script&gt;
-    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body onLoad="init();"&gt;
-
-    &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
-      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
-    &lt;/div&gt;
-
-    &lt;div class="content"&gt;
-      &lt;div class="post"&gt;
-  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P3&lt;/a&gt; &lt;span class="date"&gt;2012-08-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
-  &lt;div&gt;
-  &lt;blockquote&gt;
-&lt;p&gt;Consider the ordinary differential equation
-\begin{equation}
-\frac{dy}{dt} = -100y
-\end{equation}
-Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &amp;gt; |y_n|$, which gives us $1-100h &amp;gt; 1$ or $1-100h &amp;lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &amp;gt; 0.02$.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &amp;gt; |y_n|$, which gives us $0 &amp;lt; 1+100h &amp;lt; 1$ or $-1 &amp;lt; 1+100h &amp;lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/media/fig1.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;If we set $h &amp;gt; 0.02$, it will be like&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/media/fig2.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/media/fig3.png" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;If we set $h$ small enough, we get the correct behavior&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/assets/media/fig4.png" alt=""&gt;&lt;/p&gt;
-
-    &lt;div class="post-tags"&gt;
-      &lt;a href="/tags#quals-ref"&gt;quals&lt;/a&gt;
-      &lt;a href="/tags#numerical methods-ref"&gt;numerical methods&lt;/a&gt;
-      &lt;a href="/tags#forward Euler-ref"&gt;forward Euler&lt;/a&gt;
-      &lt;a href="/tags#backward Euler-ref"&gt;backward Euler&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="comments"&gt;
-&lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
-    var disqus_developer = 1;
-    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
-
-&lt;/div&gt;
- 
-
-    &lt;/div&gt;
-    &lt;!-- Google Prettify --&gt;
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i &lt; pres.length; ++i) {
-    pres[i].className = "prettyprint ";
-  }
-  prettyPrint();
-&lt;/script&gt;
-&lt;!-- end Google Prettify --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    <item>
       <title>Practice Qual Summer 2010 Day1 P1</title>
       <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p1.html</link>
       <pubDate>2012-08-30</pubDate>
@@ -256,8 +257,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7211952028024131" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9877515159857689" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8064999573980722" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8421476222745414" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -373,6 +374,123 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 </description>
     </item>
     <item>
+      <title>Practice Qual Summer 2010 Day1 P3</title>
+      <link>http://blog.charlesgao.com//2012/08/30/practice-qual-summer-2010-day1-p3.html</link>
+      <pubDate>2012-08-30</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7997909921001842" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37289397258643764" type="text/css" rel="stylesheet" media="all"&gt;
+
+
+  &lt;script&gt;
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+    &lt;script type='text/x-mathjax-config'&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    &lt;/script&gt;
+    &lt;script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onLoad="init();"&gt;
+
+    &lt;div class="blog-title"&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;SHITTY BLOG&lt;/a&gt;&lt;/h1&gt;
+      &lt;h3&gt;Yet another blog of Charles Gao.&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class="content"&gt;
+      &lt;div class="post"&gt;
+  &lt;div class="title"&gt;&lt;a href=""&gt;Practice Qual Summer 2010 Day1 P3&lt;/a&gt; &lt;span class="date"&gt;2012-08-30&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
+  &lt;div&gt;
+  &lt;blockquote&gt;
+&lt;p&gt;Consider the ordinary differential equation
+\begin{equation}
+\frac{dy}{dt} = -100y
+\end{equation}
+Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &amp;gt; |y_n|$, which gives us $1-100h &amp;gt; 1$ or $1-100h &amp;lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &amp;gt; 0.02$.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &amp;gt; |y_n|$, which gives us $0 &amp;lt; 1+100h &amp;lt; 1$ or $-1 &amp;lt; 1+100h &amp;lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig1.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;If we set $h &amp;gt; 0.02$, it will be like&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig2.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig3.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;If we set $h$ small enough, we get the correct behavior&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/assets/media/fig4.png" alt=""&gt;&lt;/p&gt;
+
+    &lt;div class="post-tags"&gt;
+      &lt;a href="/tags#quals-ref"&gt;quals&lt;/a&gt;
+      &lt;a href="/tags#numerical methods-ref"&gt;numerical methods&lt;/a&gt;
+      &lt;a href="/tags#forward Euler-ref"&gt;forward Euler&lt;/a&gt;
+      &lt;a href="/tags#backward Euler-ref"&gt;backward Euler&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="comments"&gt;
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+ 
+
+    &lt;/div&gt;
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    <item>
       <title>One Liners For Text Processing</title>
       <link>http://blog.charlesgao.com//2012/08/17/one-liners-for-text-processing.html</link>
       <pubDate>2012-08-17</pubDate>
@@ -381,8 +499,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.9913269145467697" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2251921532515202" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.2776914929684676" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8784702482568049" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -578,8 +696,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4541155335929171" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1847494137867286" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5566065816344479" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4184125410096824" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Practice Qual Summer 2010 Day1 P2</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.21614052470127254" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.26504928363902913" type="text/css" rel="stylesheet" media="all">
+  <title>Practice Qual Summer 2010 Day1 P4</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.7669880813991762" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.09530226133405717" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,51 +39,43 @@
 
     <div class="content">
       <div class="post">
-  <div class="title"><a href="">Practice Qual Summer 2010 Day1 P2</a> <span class="date">2012-09-02</span></h3></div>
+  <div class="title"><a href="">Practice Qual Summer 2010 Day1 P4</a> <span class="date">2012-09-06</span></h3></div>
   <div>
   <blockquote>
-<p>Define the inner product of two functions $f(x)$ and $g(x)$ defined on the interval [0,1] by
+<p>Assume that $k:[0,1]\times[0,1] \rightarrow \mathcal{R}$ is continuously differentiable and that $f:[0,1] \rightarrow \mathcal{R}$is continuous. Using the definition of the derivative, and the derivative with respect to $x$ of
 \begin{equation}
-\langle f,g \rangle = \int_0^1 f(x)g(x)dx
+F(x) = \int_0^x k(x,y)f(y)dy, x \in (0,1),
 \end{equation}
-We say $f$ and $g$ are orthogonal if $\langle f,g \rangle = 0$.
-Let $\mathcal{P}$ be the space of cubic polynomials $p(x)$ satisfying $p(1)=p&#39;(1)=0$. This is a two-dimensional linear function space. Determine an orthogonal basis for this space with respect to the inner product above. Note: Orthogonal is enough, it need not be orthonormal.</p>
+As an example, let $k(x,y) = x^2y$ and $f(x)=x$. Calculate $F&#39;(x)$ in two different ways: (i) using the formula you found, and (ii) by calculating $F(x)$ and taking a derivative.</p>
 </blockquote>
 
-<p>First we find two vectors in the space and then we use Gram-Schmidt process to orthogonalize them. </p>
-
-<p>The general way of finding the two vectors are to assume its form $p(x)=ax^3+bx^2+cx+d$. The two conditions $p(1)=p&#39;(1)=0$ gives us two constrains so that only two variables among $a,b,c$ and $d$ are flexible. That is also the reason why the space is two dimensional. We have
+<p>By the definition of derivative,
 \begin{equation}
-\cases{
-    a + b + c + d = 0\cr
-    3a + 2b + c = 0
-}
+F&#39;(x) = \lim_{\epsilon\rightarrow 0}\frac{F(x+\epsilon)-F(x)}{\epsilon} = \left(\int_0^{x+\epsilon}k(x+\epsilon,y)f(y)dy - \int_0^x k(x,y)f(y)dy\right)/\epsilon
 \end{equation}
-We find two linear independent solutions
 \begin{equation}
-\cases{
-    p_1(x) = x^3 - 2x^2 + x\cr
-    p_2(x) = 2x^3 - 3x^2 + 1
-}
+=\lim_{\epsilon\rightarrow 0}\left(\int_0^{x+\epsilon}k(x+\epsilon,y)f(y)dy - \int_0^{x+\epsilon}k(x,y)f(y)dy + \int_0^{x+\epsilon}k(x,y)f(y)dy - \int_0^x k(x,y)f(y)dy\right)/\epsilon
 \end{equation}
-There are other ways to come up with the two vectors. For example, by observation $x-1$ is also in the space.</p>
-
-<p>Anyway, we will project $p_2(x)$ onto $p_1(x)$ and then substract that part from $p_2(x)$ to get a vector that is still in the space and is orthogonal to $p_1(x)$. This is done by
 \begin{equation}
-p_3(x) = p_2(x) - \frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = -\frac{7}{2}x^3+8x^2+1-\frac{11}{2}x
+=\lim_{\epsilon\rightarrow 0}\left(\int_0^{x+\epsilon}\frac{k(x+\epsilon,y)-k(x,y)}{\epsilon} f(y)dy  + \frac{1}{\epsilon}\int_x^{x+\epsilon}k(x,y)f(y)dy \right) = \int_0^xk_x(x,y)f(y)dy + k(x,x)f(x)
 \end{equation}
-One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.</p>
+In the derivation above, we used the continuously differentiability of $k$ and the continuity of $f$ in exchanging the integral and limit at the second last step.</p>
 
-<p>Note: Denote the angle between $p_1(x)$ and $p_2(x)$ as $\theta$. Then $|p_2|cos\theta\vec{e}$ is the projection of $p_2(x)$ onto $p_1(x)$, where $\vec{e}$ is the unit vector with the same direction as $p_1(x)$. 
+<p>For the example $k(x,y)=x^2y$ and $f(x)=x$, we first use our formula:
 \begin{equation}
-\frac{\langle p_1(x),p_2(x)\rangle}{\langle p_1(x), p_1(x)\rangle}p_1(x) = \frac{|p_1||p_2|cos\theta}{|p_1|^2}p_1 = |p_2|cos\theta\vec{e}
-\end{equation}</p>
+\int_0^xk_x(x,y)f(y)dy + k(x,x)f(x) = \int_0^x2xy^2dy + x^4 = \frac{5}{3}x^4.
+\end{equation}
+If we calculate it directly, we get
+\begin{equation}
+\int_0^xk(x,y)f(y)dy = \int_0^xx^2y^2dy = \frac{1}{3}x^5. 
+\end{equation}
+Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same solution.</p>
 
     <div class="post-tags">
       <a href="/tags#quals-ref">quals</a>
-      <a href="/tags#Gram-Schmidt process-ref">Gram-Schmidt process</a>
-      <a href="/tags#vector space-ref">vector space</a>
-      <a href="/tags#orthogonal-ref">orthogonal</a>
+      <a href="/tags#analysis-ref">analysis</a>
+      <a href="/tags#kernel-ref">kernel</a>
+      <a href="/tags#partial differentiation-ref">partial differentiation</a>
     </div>
   </div>
 </div>
