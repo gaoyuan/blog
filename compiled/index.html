@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Shitty Blog</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.5313011100796289" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21544086219068825" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.6538874160642676" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13136259243666548" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,62 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2012/09/25/discovering-prefixes-and-suffixes.html">Discovering Prefixes And Suffixes</a> <span class="date">2012-09-25</span></h3>
+
+  <p>English is a language that has a concatinative morphology. For example, the word <em>preinstallation</em> can be split into three parts -- a prefix <em>pre</em>, a stem <em>install</em> and a suffix <em>ation</em>. Given a corpus of english words, how do we discover the prefixes and suffixes computationally? This is an interesting question, for we can use similar methods to analyze other languages that also share a concatinative morphology.</p>
+
+<p>The corpus of english words can be represented by a forward tree (and a backward tree). The root of the forward tree is the token that denotes the start of word. Each node in the tree corresponds to a character. A word in the corpus is therefore a path starting from the root. Similarly, for the backward tree, the root is the end of word token. A path starting from the root corresponds to a word reading backwards.</p>
+
+<p>After building this tree representation, we can calculate the frequency of each node, which is defined as the frequency of the path starting from the root to that node. Since prefixes(or suffixes) tend to appear more often, high frequency candidates are more likely to be considered prefixes(or suffixes) given a fixed character sequence length, or equivalently, a fixed depth in the tree. For instance, for a forward tree, we sort the candidates with tree depth 5 by their frequencies, we get (below the root, i.e. start of word token, is ignored)</p>
+
+<blockquote>
+<p>candidate,frequency</p>
+
+<p>OVER,378</p>
+
+<p>INTE,338</p>
+
+<p>COMP,233</p>
+
+<p>CONS,212</p>
+
+<p>UNDE,205</p>
+
+<p>TRAN,183</p>
+
+<p>CONT,179</p>
+
+<p>STRA,150</p>
+
+<p>COMM,142</p>
+
+<p>PRES,133</p>
+
+<p>...</p>
+</blockquote>
+
+<p>It seems that we can capture some prefixes solely by their frequencies. The guy on the top of the list -- <em>OVER</em> is a common prefix. However, a lot of the high frequency stuff are not actually prefixes, like <em>INTE</em> and <em>UNDE</em>. Why do they have a high frequency though? That is because <em>INTER</em> and <em>UNDER</em> are prefixes. So high frequency itself is not a sufficient criterion for a prefix.</p>
+
+<p>It turns out we can eliminate the bad ones by the distribution of their children. For all the characters following <em>INTE</em>, most of their occurancies should be <em>R</em>, therefore the distribution of the children of <em>INTE</em> should be highly biased. A measure that people usually use to discribe this is called <strong>Entropy</strong>. It is defined as $-\sum_ip_i \ln p_i$, where $p_i$ is the probability of the i-th child. A high entropy implies the children are evenly distributed. Candidate with a high entropy is evidence for a good cut between prefix and stem. That is because varies stems can be attached to the same prefix, so the character following the prefix is rather chaotic.</p>
+
+<p>It turns out there exist some cases where the boundary of a prefix or suffix does not have a high entropy. The suffix <em>-ing</em> is a good example. Unfortunately, <em>ling</em> appears more often than other <em>-ing</em>&#39;s, like <em>ting</em> or <em>ming</em>. Therefore if you look at <em>ing</em>, it doesn&#39;t have a very high entropy. Combining the frequency and entropy criterions helps a lot, but there are still some corner cases.</p>
+
+<p>What if we print the frequency and entropy path of each candidate? Below we selected the depth-6 candidates that have both high frequencies and high entropies. We print the frequency and entropy path of each candidate:</p>
+
+<blockquote>
+<p>B L A C K 62 2.44667
+B L A C   63 0.0815104
+B L A 235 2.2194
+B L   642 1.52547
+B 8561 1.94162</p>
+</blockquote>
+
+
+  <div class="more">
+    <a href="/2012/09/25/discovering-prefixes-and-suffixes.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2012/09/06/practice-qual-summer-2010-day1-p4.html">Practice Qual Summer 2010 Day1 P4</a> <span class="date">2012-09-06</span></h3>
 
   <blockquote>
@@ -112,6 +168,43 @@ There are other ways to come up with the two vectors. For example, by observatio
   </div>
 </div>
 <div class="post">
+  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
+
+  <blockquote>
+<p>Consider the ordinary differential equation
+\begin{equation}
+\frac{dy}{dt} = -100y
+\end{equation}
+Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
+</blockquote>
+
+<ul>
+<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
+<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
+</ul>
+
+<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
+
+<p><img src="/assets/media/fig1.png" alt=""></p>
+
+<p>If we set $h &gt; 0.02$, it will be like</p>
+
+<p><img src="/assets/media/fig2.png" alt=""></p>
+
+<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
+
+<p><img src="/assets/media/fig3.png" alt=""></p>
+
+<p>If we set $h$ small enough, we get the correct behavior</p>
+
+<p><img src="/assets/media/fig4.png" alt=""></p>
+
+
+  <div class="more">
+    <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html">Practice Qual Summer 2010 Day1 P1</a> <span class="date">2012-08-30</span></h3>
 
   <blockquote>
@@ -148,43 +241,6 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 
   <div class="more">
     <a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html" class="btn">Read more or comment..</a>
-  </div>
-</div>
-<div class="post">
-  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
-
-  <blockquote>
-<p>Consider the ordinary differential equation
-\begin{equation}
-\frac{dy}{dt} = -100y
-\end{equation}
-Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
-</blockquote>
-
-<ul>
-<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
-<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
-</ul>
-
-<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
-
-<p><img src="/assets/media/fig1.png" alt=""></p>
-
-<p>If we set $h &gt; 0.02$, it will be like</p>
-
-<p><img src="/assets/media/fig2.png" alt=""></p>
-
-<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
-
-<p><img src="/assets/media/fig3.png" alt=""></p>
-
-<p>If we set $h$ small enough, we get the correct behavior</p>
-
-<p><img src="/assets/media/fig4.png" alt=""></p>
-
-
-  <div class="more">
-    <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
   </div>
 </div>
 <div class="post">

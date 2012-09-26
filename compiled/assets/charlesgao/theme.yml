@@ -1,0 +1,27 @@
+{
+  "stylesheets" : {
+    "default" : [
+      "style.css"
+    ],
+    
+    "page" : [
+    
+    ],
+    
+    "post" : [
+    
+    ],
+    
+    "widgets" : {
+      "google_prettify" : "twitter-bootstrap.css"
+    }
+    
+  },
+  
+  "javascripts" : {
+    "default" : [
+
+    ]
+  }
+  
+}

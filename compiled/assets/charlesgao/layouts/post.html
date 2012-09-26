@@ -1,0 +1,18 @@
+---
+layout : default
+---
+<div class="post">
+  <div class="title"><a href="{{ url }}">{{ page.title }}</a> <span class="date">{{ page.date }}</span></h3></div>
+  <div>
+  {{{ content }}}
+    <div class="post-tags">
+    {{# page.tags?to_tags }}
+      <a href="{{url}}">{{name}}</a>
+    {{/ page.tags?to_tags }}
+    </div>
+  </div>
+</div>
+<div class="comments">
+{{{ comments }}}
+</div>
+ 
