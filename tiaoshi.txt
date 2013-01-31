@@ -1,0 +1,3 @@
+Change this file to test "git pull".
+Change it on github.com, and pull it to local machine.
+Then visit http://www.charlesgao.com/blog/tiaoshi.txt to see if it changes.
