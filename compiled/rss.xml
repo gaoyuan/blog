@@ -3,7 +3,7 @@
   <channel>
     <title>SHITTY BLOG</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2013-01-30 16:45:14 -0800</pubDate>
+    <pubDate>2013-01-30 17:37:13 -0800</pubDate>
     <item>
       <title>Conferences Related To Control</title>
       <link>http://blog.charlesgao.com//2013/01/29/conferences-related-to-control.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Conferences Related To Control&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.06405265876333" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.32441711315409116" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7482302679643025" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9574614771750413" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -51,13 +51,7 @@
       &lt;div class="post"&gt;
   &lt;div class="title"&gt;&lt;a href=""&gt;Conferences Related To Control&lt;/a&gt; &lt;span class="date"&gt;2013-01-29&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;aaaa&lt;/p&gt;
-
-&lt;p&gt;aaaa&lt;/p&gt;
-
-&lt;p&gt;aaaa&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://dynamicwalking.org"&gt;Dynamic Walking 2013&lt;/a&gt;
+  &lt;p&gt;&lt;a href="http://dynamicwalking.org"&gt;Dynamic Walking 2013&lt;/a&gt;
 Deadline: 2/10/2013&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://cdc2013.units.it"&gt;Conference on Decision and Control 2013&lt;/a&gt;
@@ -128,8 +122,8 @@ Deadline: 9/27/2013&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Discovering Prefixes And Suffixes&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7910780546189908" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.862798711722318" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8730558368429288" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.12006458265133835" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -501,8 +495,8 @@ done
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P4&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5995906693867615" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7028440268711694" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.35119004224409545" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0629265327989833" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -619,8 +613,8 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.29686264010561536" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5761700996192232" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3851563293861018" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8366714638670487" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -745,8 +739,8 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3983648876840009" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6304782241522748" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7312349697211052" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5272110403188522" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -862,8 +856,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.2598998775081046" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.33547667242147705" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5025413188812404" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.602103733212573" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -987,8 +981,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7770260413711516" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4687474446186666" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6850694701004726" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8382533242231912" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1184,8 +1178,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4232826141342484" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7965104463254009" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7664406265651135" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.427924686805891" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
