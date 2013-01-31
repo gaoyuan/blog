@@ -7,8 +7,6 @@ tags:
   - conference
   - control
 ---
-Just a test
-Just a test again :) 
 
 [Dynamic Walking 2013](http://dynamicwalking.org)
 Deadline: 2/10/2013
