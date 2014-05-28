@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Shitty Blog</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.50382694969252" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13605937559977666" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.07427502535690134" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7600907907065645" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,45 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2014/05/27/probability-density-function-and-partial-differential-equations.html">Probability Density Function And Partial Differential Equations</a> <span class="date">2014-05-27</span></h3>
+
+  <p>Consider the following problem:</p>
+
+<blockquote>
+<p>The price of a stock is described by a Brownian motion. Suppose the starting price is 5, and the company defaults if ever the price drops to zero. What is the probability that the company is bankrupt at time $T$? What is the probability that the price is above 10 at time $T$?</p>
+</blockquote>
+
+<p>Let&#39;s say the price of the stock is described by the time series $p(t)$. The company is bankrupt at time $T$ if $\exists s \le T$, such that $p(s) = 0$. By the reflection principle of Brownian motion, 
+\begin{equation}
+P\left(inf_{0\le s\le T}p(s) \le 0\right) = 2P\left(p(T) \le 0\right) = 2\int_{-\infty}^{-5}\frac{1}{\sqrt{2\pi T}}e^{\frac{-x^2}{2T}}.
+\end{equation}
+For the second question, we need $p(T) &gt; 10$ and $p(s) &gt; 0, \forall 0 \le s \le T$. The probability can be calculated as 
+\begin{equation}
+P\left(p(T) &gt; 10\right) - P\left(p(T) &gt; 10 \cap inf_{0\le s\le T}p(s) \le 0\right),
+\end{equation}
+using the fact that $P(A\cap B) = P(A) - P(A\cap B^\complement)$. Note that the latter part is equal to $P\left(p(T) &lt; -10\right)$ (Imagine the price first hits zero, then the probability that it goes back above 10 is equal to a reflecting process that drops below -10). Therefore the probability that the price is above 10 at time $T$ is
+\begin{equation}
+P\left(p(T) &lt; 0\right) - P\left(p(T) &lt; -10\right) = P\left(-10 \le p(T) &lt; 0\right) = \int_{-15}^{-5}\frac{1}{\sqrt{2\pi T}}e^{\frac{-x^2}{2T}}.
+\end{equation}</p>
+
+<p>Now let&#39;s solve the problem in another way. We know that Brownian motion is governed by the following partial differential equation
+\begin{equation}
+p_t(x, t) = Dp_{xx}(x, t),
+\end{equation}
+where $p(x,t)$ is the probability density. For a standard Brownian motion, we have $D = 1/2$. Going back to our problem, we know the stock price satisfies this PDE, with boundary conditions $p(0, t) = 0$ and $p(x, t) \rightarrow 0, x \rightarrow \infty$. The absorbing boundary condition reflects the fact that once the price drops to zero, we are at the point of no return. The initial condition for the density is given by $p(x, 0) = \delta(x - 5)$.</p>
+
+<p>To solve for this PDE with the above initial and boundary conditions, one always apply the Green function and the method of images. That is, we imagine another point source that is outside of the domain (at $x = -5$) which counteracts the point source at $x = 5$ to give us the boundary condition. The solution is therefore the superposition of two Green functions
+\begin{equation}
+p(x, t) = G(5) - G(-5) = \frac{1}{\sqrt{2\pi t}}\left(e^{\frac{-(x-5)^2}{2t}} - e^{\frac{-(x+5)^2}{2t}} \right).
+\end{equation}
+See a plot of this density:</p>
+
+
+  <div class="more">
+    <a href="/2014/05/27/probability-density-function-and-partial-differential-equations.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2013/01/29/conferences-related-to-control.html">Conferences Related To Control</a> <span class="date">2013-01-29</span></h3>
 
   <p><a href="http://dynamicwalking.org">Dynamic Walking 2013</a>

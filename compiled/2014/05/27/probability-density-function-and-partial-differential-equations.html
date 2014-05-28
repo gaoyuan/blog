@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Probability Density Function And Partial Differential Equations</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.8030245056820091" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.843992309481516" type="text/css" rel="stylesheet" media="all">
+
+
+  <script>
+  var _gaq=[['_setAccount','UA-33798309-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+    <script type='text/x-mathjax-config'>
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+    });
+    </script>
+    <script type='text/javascript' src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body onLoad="init();">
+
+    <div class="blog-title">
+      <h1><a href="/">SHITTY BLOG</a></h1>
+      <h3>Yet another blog of Charles Gao.</h3>
+    </div>
+
+    <div class="content">
+      <div class="post">
+  <div class="title"><a href="">Probability Density Function And Partial Differential Equations</a> <span class="date">2014-05-27</span></h3></div>
+  <div>
+  <p>Consider the following problem:</p>
+
+<blockquote>
+<p>The price of a stock is described by a Brownian motion. Suppose the starting price is 5, and the company defaults if ever the price drops to zero. What is the probability that the company is bankrupt at time $T$? What is the probability that the price is above 10 at time $T$?</p>
+</blockquote>
+
+<p>Let&#39;s say the price of the stock is described by the time series $p(t)$. The company is bankrupt at time $T$ if $\exists s \le T$, such that $p(s) = 0$. By the reflection principle of Brownian motion, 
+\begin{equation}
+P\left(inf_{0\le s\le T}p(s) \le 0\right) = 2P\left(p(T) \le 0\right) = 2\int_{-\infty}^{-5}\frac{1}{\sqrt{2\pi T}}e^{\frac{-x^2}{2T}}.
+\end{equation}
+For the second question, we need $p(T) &gt; 10$ and $p(s) &gt; 0, \forall 0 \le s \le T$. The probability can be calculated as 
+\begin{equation}
+P\left(p(T) &gt; 10\right) - P\left(p(T) &gt; 10 \cap inf_{0\le s\le T}p(s) \le 0\right),
+\end{equation}
+using the fact that $P(A\cap B) = P(A) - P(A\cap B^\complement)$. Note that the latter part is equal to $P\left(p(T) &lt; -10\right)$ (Imagine the price first hits zero, then the probability that it goes back above 10 is equal to a reflecting process that drops below -10). Therefore the probability that the price is above 10 at time $T$ is
+\begin{equation}
+P\left(p(T) &lt; 0\right) - P\left(p(T) &lt; -10\right) = P\left(-10 \le p(T) &lt; 0\right) = \int_{-15}^{-5}\frac{1}{\sqrt{2\pi T}}e^{\frac{-x^2}{2T}}.
+\end{equation}</p>
+
+<p>Now let&#39;s solve the problem in another way. We know that Brownian motion is governed by the following partial differential equation
+\begin{equation}
+p_t(x, t) = Dp_{xx}(x, t),
+\end{equation}
+where $p(x,t)$ is the probability density. For a standard Brownian motion, we have $D = 1/2$. Going back to our problem, we know the stock price satisfies this PDE, with boundary conditions $p(0, t) = 0$ and $p(x, t) \rightarrow 0, x \rightarrow \infty$. The absorbing boundary condition reflects the fact that once the price drops to zero, we are at the point of no return. The initial condition for the density is given by $p(x, 0) = \delta(x - 5)$.</p>
+
+<p>To solve for this PDE with the above initial and boundary conditions, one always apply the Green function and the method of images. That is, we imagine another point source that is outside of the domain (at $x = -5$) which counteracts the point source at $x = 5$ to give us the boundary condition. The solution is therefore the superposition of two Green functions
+\begin{equation}
+p(x, t) = G(5) - G(-5) = \frac{1}{\sqrt{2\pi t}}\left(e^{\frac{-(x-5)^2}{2t}} - e^{\frac{-(x+5)^2}{2t}} \right).
+\end{equation}
+See a plot of this density:</p>
+
+<p><img src="/assets/media/fig7.png" /></p>
+
+<p>The probability that the company is bankrupt at $T$ is given by
+\begin{equation}
+1 - \int_0^\infty p(x, T).
+\end{equation}
+The probability that the price is above 10 at $T$ is given by
+\begin{equation}
+\int_{10}^\infty p(x, T).
+\end{equation}
+We can see the close relationship between the method of images and the reflection principle of Brownian motion.</p>
+
+    <div class="post-tags">
+      <a href="/tags#probability-ref">probability</a>
+      <a href="/tags#stochastic process-ref">stochastic process</a>
+      <a href="/tags#brownian motion-ref">brownian motion</a>
+      <a href="/tags#differential equation-ref">differential equation</a>
+      <a href="/tags#partial differential equation-ref">partial differential equation</a>
+    </div>
+  </div>
+</div>
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'charlesgao'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+ 
+
+    </div>
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+</body>
+</html>
