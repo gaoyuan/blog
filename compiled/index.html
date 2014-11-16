@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Math, CS and Fun</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.01929161336921026" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06419903784517589" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.4903076125360465" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.027136853309803866" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,20 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2014/11/13/things-about-general-exam.html">Things About General Exam</a> <span class="date">2014-11-13</span></h3>
+
+  <p>Today I talked with Professor Mark Kot about my progress in the marathon of PhD. Mark was very helpful and offered me lots of advice. I&#39;m about to take my general exam this year, so it&#39;s important to keep in mind the rules.</p>
+
+<p>Both the general exam and the final thesis defense are supervised by a committee of four to five professors. Chairman of the committee, of course, is my advisor. One of them is the Graduate School Representative (GPA), and he/she has to be from another department. The main purpose of GPA is to keep my advisor from answering questions for me, thus maintaining the fairness of the exam. Aside from the chairman and GPA, one of the professors must be from the CORE amath faculty. That&#39;s basically all the constraints, so I have the freedom to choose one or two other committee members. And it&#39;s always a good idea to choose professors knowledgeable of the field of my research.</p>
+
+<p>For the final thesis defense, I have to get my written thesis proofread by the reading committee, which are formed by two members from my supervisory committee, before formally arranging an exam date with the graduate school. One important thing to remind my advisor to bring on the final exam is the warrant, a document that has to be signed by all members.</p>
+
+
+  <div class="more">
+    <a href="/2014/11/13/things-about-general-exam.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/2014/05/27/probability-density-function-and-partial-differential-equations.html">Probability Density Function And Partial Differential Equations</a> <span class="date">2014-05-27</span></h3>
 
   <p>Consider the following problem:</p>
@@ -238,43 +252,6 @@ There are other ways to come up with the two vectors. For example, by observatio
   </div>
 </div>
 <div class="post">
-  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
-
-  <blockquote>
-<p>Consider the ordinary differential equation
-\begin{equation}
-\frac{dy}{dt} = -100y
-\end{equation}
-Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
-</blockquote>
-
-<ul>
-<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
-<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
-</ul>
-
-<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
-
-<p><img src="/assets/media/fig1.png" alt=""></p>
-
-<p>If we set $h &gt; 0.02$, it will be like</p>
-
-<p><img src="/assets/media/fig2.png" alt=""></p>
-
-<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
-
-<p><img src="/assets/media/fig3.png" alt=""></p>
-
-<p>If we set $h$ small enough, we get the correct behavior</p>
-
-<p><img src="/assets/media/fig4.png" alt=""></p>
-
-
-  <div class="more">
-    <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
-  </div>
-</div>
-<div class="post">
   <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html">Practice Qual Summer 2010 Day1 P1</a> <span class="date">2012-08-30</span></h3>
 
   <blockquote>
@@ -311,6 +288,43 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 
   <div class="more">
     <a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+<div class="post">
+  <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
+
+  <blockquote>
+<p>Consider the ordinary differential equation
+\begin{equation}
+\frac{dy}{dt} = -100y
+\end{equation}
+Your unsophisticated friend is using the forward Euler method to solve this equation over the time interval [0, 5]. He observes a discrete approximation to the solution $y(t)$ whose absolute value increases over time. Is this possible? If so, characterize the time step that he is using. Now answer the same question using the backward Euler method.</p>
+</blockquote>
+
+<ul>
+<li><p>For the forward Euler method, we have $y_{n+1} = y_n + hf(t_n)$, where $h$ is the time spacing. In our case it will become $y_{n+1} = y_n + h(-100y_n) = (1-100h)y_n$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $1-100h &gt; 1$ or $1-100h &lt; -1$. Since the timestep $h$ is positive, only the latter case is possible. In that case $h &gt; 0.02$.</p></li>
+<li><p>For the backward Euler method, we have $y_{n+1} = y_n + hf(t_{n+1})$. In our case it will become $y_{n+1} = y_n + h(-100y_{n+1})$. To make the absolute value of $y(t)$ increases over time, we have $|y_{n+1}| &gt; |y_n|$, which gives us $0 &lt; 1+100h &lt; 1$ or $-1 &lt; 1+100h &lt; 0$. Since the timestep $h$ is positive, neither case is possible. Therefore it is impossible if backward Euler method is used.</p></li>
+</ul>
+
+<p>Now we make some plots of the forward Euler method. Note that if we set $h = 0.02$, the absolute value of $y(t)$ will remain the same. In fact it will be oscillating because $y_{n+1} = -y_n$. Below is a plot of the case. We initialize $y(0) = 1$.</p>
+
+<p><img src="/assets/media/fig1.png" alt=""></p>
+
+<p>If we set $h &gt; 0.02$, it will be like</p>
+
+<p><img src="/assets/media/fig2.png" alt=""></p>
+
+<p>If we set $h$ slightly smaller than $0.02$, it is still not working correctly, but the amplitude of the solution will not increase.</p>
+
+<p><img src="/assets/media/fig3.png" alt=""></p>
+
+<p>If we set $h$ small enough, we get the correct behavior</p>
+
+<p><img src="/assets/media/fig4.png" alt=""></p>
+
+
+  <div class="more">
+    <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
   </div>
 </div>
 <div class="post">
