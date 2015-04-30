@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <rss version="2.0">
   <channel>
-    <title>Math, CS and Fun</title>
+    <title>Desiderata</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2014-11-16 11:54:29 -0800</pubDate>
+    <pubDate>2015-04-29 19:06:42 -0700</pubDate>
     <item>
       <title>Things About General Exam</title>
       <link>http://blog.charlesgao.com//2014/11/13/things-about-general-exam.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Things About General Exam&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4212658589255097" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9006375440190363" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6976086419201001" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5044290209690124" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -43,7 +43,7 @@
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -107,8 +107,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Probability Density Function And Partial Differential Equations&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.2519531951182309" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.29004212770356086" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6048564285440734" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.07976198716529992" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -137,7 +137,7 @@
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -239,8 +239,8 @@ We can see the close relationship between the method of images and the reflectio
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Conferences Related To Control&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.12195755614429948" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.04312809305734322" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.04053230441096167" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8469222534166052" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -269,7 +269,7 @@ We can see the close relationship between the method of images and the reflectio
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -348,8 +348,8 @@ Deadline: 9/27/2013&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Discovering Prefixes And Suffixes&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.209095459825828" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7304713700913043" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7839599369552733" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2095806332002078" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -378,7 +378,7 @@ Deadline: 9/27/2013&lt;/p&gt;
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -721,8 +721,8 @@ done
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P4&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.08423717749775794" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.18063885519344158" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3983261419241605" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8209221360698399" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -751,7 +751,7 @@ done
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -839,8 +839,8 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.02556092803288612" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.007258222260699498" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1786804485720923" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9889893581669311" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -869,7 +869,7 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -965,8 +965,8 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.14741388637860708" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4261257789633687" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.988622049102376" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4519239658462545" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -995,7 +995,7 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -1090,8 +1090,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8601460424154875" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6909101702907511" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.04959742120520627" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9125896955419108" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1120,7 +1120,7 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -1207,8 +1207,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.20334452787376034" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.15979848233637273" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.19968849003433242" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.37890998129852727" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1237,7 +1237,7 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
@@ -1404,8 +1404,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.11357385262562414" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.49027364812806795" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.18245659333013464" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.36300009532962085" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1434,7 +1434,7 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;body onLoad="init();"&gt;
 
     &lt;div class="blog-title"&gt;
-      &lt;h1&gt;&lt;a href="/"&gt;Math, CS and Fun&lt;/a&gt;&lt;/h1&gt;
+      &lt;h1&gt;&lt;a href="/"&gt;Desiderata&lt;/a&gt;&lt;/h1&gt;
       &lt;h3&gt;Yet another blog of Yuan Gao.&lt;/h3&gt;
     &lt;/div&gt;
 
