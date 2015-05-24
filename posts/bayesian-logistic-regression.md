@@ -9,7 +9,7 @@ tags:
   - rejection sampling 
 
 ---
-The Bayesian approach to machine learning replaces the sauce of optimization by probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes' rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.
+The Bayesian approach to machine learning replaces the sauce of optimization by that of probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes' rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.
 
 The logistic regression model is widely used in classification. For simplicity and visualization purposes we will study a simple 2d classification problem, where we assume that the data points can be separated by a line passing through the origin. This is of course a bad assumption in general, but who cares -- no model is perfect anyways.
 
@@ -17,7 +17,7 @@ For logistic regression, we take the probability of a data point $(x\_i, y\_i) \
 \begin{equation}
 P(Z = 0 | X = (x\_i, y\_i), A = a, B = b) = \frac{1}{1 + exp(-ax\_i - by\_i)},
 \end{equation}
-where $A$, $B$ are the parameters in our model. In a Bayesian's eye, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don't have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?
+where $A$, $B$ are the parameters in our model. In a Bayesian's eyes, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don't have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?
 
 For that, let's look at the probability of points belonging to the opposite class
 \begin{equation}

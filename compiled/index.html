@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Desiderata</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.9803363639670843" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5864099409313399" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.4839590467046102" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.052135699066361174" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -41,7 +41,7 @@
       <div class="post">
   <h3 class="title"><a href="/2015/05/23/bayesian-logistic-regression.html">Bayesian Logistic Regression</a> <span class="date">2015-05-23</span></h3>
 
-  <p>The Bayesian approach to machine learning replaces the sauce of optimization by probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes&#39; rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.</p>
+  <p>The Bayesian approach to machine learning replaces the sauce of optimization by that of probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes&#39; rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.</p>
 
 <p>The logistic regression model is widely used in classification. For simplicity and visualization purposes we will study a simple 2d classification problem, where we assume that the data points can be separated by a line passing through the origin. This is of course a bad assumption in general, but who cares -- no model is perfect anyways.</p>
 
@@ -49,7 +49,7 @@
 \begin{equation}
 P(Z = 0 | X = (x_i, y_i), A = a, B = b) = \frac{1}{1 + exp(-ax_i - by_i)},
 \end{equation}
-where $A$, $B$ are the parameters in our model. In a Bayesian&#39;s eye, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don&#39;t have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?</p>
+where $A$, $B$ are the parameters in our model. In a Bayesian&#39;s eyes, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don&#39;t have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?</p>
 
 <p>For that, let&#39;s look at the probability of points belonging to the opposite class
 \begin{equation}

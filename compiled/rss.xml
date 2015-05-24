@@ -3,7 +3,7 @@
   <channel>
     <title>Desiderata</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2015-05-23 18:30:52 -0700</pubDate>
+    <pubDate>2015-05-24 09:33:43 -0700</pubDate>
     <item>
       <title>Bayesian Logistic Regression</title>
       <link>http://blog.charlesgao.com//2015/05/23/bayesian-logistic-regression.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Bayesian Logistic Regression&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.0815978895084779" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.28853216794253034" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.20986146311743592" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.24499437437305482" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -51,7 +51,7 @@
       &lt;div class="post"&gt;
   &lt;div class="title"&gt;&lt;a href=""&gt;Bayesian Logistic Regression&lt;/a&gt; &lt;span class="date"&gt;2015-05-23&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;
   &lt;div&gt;
-  &lt;p&gt;The Bayesian approach to machine learning replaces the sauce of optimization by probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes&amp;#39; rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.&lt;/p&gt;
+  &lt;p&gt;The Bayesian approach to machine learning replaces the sauce of optimization by that of probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes&amp;#39; rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.&lt;/p&gt;
 
 &lt;p&gt;The logistic regression model is widely used in classification. For simplicity and visualization purposes we will study a simple 2d classification problem, where we assume that the data points can be separated by a line passing through the origin. This is of course a bad assumption in general, but who cares -- no model is perfect anyways.&lt;/p&gt;
 
@@ -59,7 +59,7 @@
 \begin{equation}
 P(Z = 0 | X = (x_i, y_i), A = a, B = b) = \frac{1}{1 + exp(-ax_i - by_i)},
 \end{equation}
-where $A$, $B$ are the parameters in our model. In a Bayesian&amp;#39;s eye, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don&amp;#39;t have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?&lt;/p&gt;
+where $A$, $B$ are the parameters in our model. In a Bayesian&amp;#39;s eyes, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don&amp;#39;t have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?&lt;/p&gt;
 
 &lt;p&gt;For that, let&amp;#39;s look at the probability of points belonging to the opposite class
 \begin{equation}
@@ -166,8 +166,8 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Things About General Exam&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.16273880124761686" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2904717601922435" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.022224308836198525" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3235022476087074" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -260,8 +260,8 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Probability Density Function And Partial Differential Equations&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.970114673157315" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8104952792664298" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5775755235103595" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.19588296370898417" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -392,8 +392,8 @@ We can see the close relationship between the method of images and the reflectio
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Conferences Related To Control&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5938614090828596" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.06415240812834477" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6571209061197757" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8828584788473537" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -501,8 +501,8 @@ Deadline: 9/27/2013&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Discovering Prefixes And Suffixes&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3655035527518016" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.16391397516156736" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.060375724975585854" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2226238957212643" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -874,8 +874,8 @@ done
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P4&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.20184963713535597" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.05667287776446206" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1487100499828714" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7521842751630192" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -992,8 +992,8 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1329966444236491" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9688168636403713" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8623117330626237" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.10781870418302486" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1118,8 +1118,8 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.0037212809007720615" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.01714140809391551" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7704206952149669" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13619986126718653" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1243,8 +1243,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.18450550317325431" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.011848426829411562" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.05631808967056384" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4216208982483233" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1360,8 +1360,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4755853747304062" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7592271542722653" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.51946918722203" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3769620111519497" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1557,8 +1557,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.06355036331231567" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8506334304362173" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.19743765408151148" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9887734989601079" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
