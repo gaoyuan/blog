@@ -1,6 +1,5 @@
 ---
-title: Math, CS and Fun
-description:
+title: Desiderata
 ---
 
 {{# posts_latest }}

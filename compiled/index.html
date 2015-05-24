@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Math, CS and Fun</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.9710561291350227" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6560341594424755" type="text/css" rel="stylesheet" media="all">
+  <title>Desiderata</title>
+  <link href="/assets/charlesgao/stylesheets/style.css?0.9803363639670843" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5864099409313399" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -39,6 +39,39 @@
 
     <div class="content">
       <div class="post">
+  <h3 class="title"><a href="/2015/05/23/bayesian-logistic-regression.html">Bayesian Logistic Regression</a> <span class="date">2015-05-23</span></h3>
+
+  <p>The Bayesian approach to machine learning replaces the sauce of optimization by probability. Instead of maximizing the likelihood, it introduces prior to the parameters and calculates the posterior distribution of the parameters after seeing all the data using Bayes&#39; rule (of course!). The posterior distribution captures our beliefs about the parameters, and it is definitely more informative than a single optimal set of parameters learned from maximizing the likelihood. However the extra information comes at a price, since inferring about the posterior is often computationally expansive. For carefully chosen priors and likelihood (conjugacy), it is possible to get analytical solution for the posterior, but unfortunately in reality this is rarely the case, even for the simple logistic regression model.</p>
+
+<p>The logistic regression model is widely used in classification. For simplicity and visualization purposes we will study a simple 2d classification problem, where we assume that the data points can be separated by a line passing through the origin. This is of course a bad assumption in general, but who cares -- no model is perfect anyways.</p>
+
+<p>For logistic regression, we take the probability of a data point $(x_i, y_i) \in \mathbb{R}^2$ belonging to class $z_i \in \{0, 1\}$ as
+\begin{equation}
+P(Z = 0 | X = (x_i, y_i), A = a, B = b) = \frac{1}{1 + exp(-ax_i - by_i)},
+\end{equation}
+where $A$, $B$ are the parameters in our model. In a Bayesian&#39;s eye, they are not cold-blooded reptiles (a number) but warm-blooded mammals (random variables). Wait, I love mammals, but what is our prior belief about them, before seeing any training examples? While, I don&#39;t have any, my intuition is just that any line is equally likely to separate the positive and negative training examples. How does that translates to the priors of $A$ and $B$?</p>
+
+<p>For that, let&#39;s look at the probability of points belonging to the opposite class
+\begin{equation}
+P(Z = 1 | X = (x_i, y_i), A = a, B = b) = 1 - P(Z = 0 | X = (x_i, y_i), A = a, B = b) = \frac{exp(-ax_i - by_i)}{1 + exp(-ax_i - by_i)}.
+\end{equation}
+If the point $(x_i, y_i)$ happens to lie on the decision boundary, we must have
+\begin{equation}
+P(Z = 1 | X = (x_i, y_i), A = a, B = b) = P(Z = 0 | X = (x_i, y_i), A = a, B = b).
+\end{equation}
+This corresponds to the condition
+\begin{equation}
+ax_i + by_i = 0.
+\end{equation}
+If a point $(x_i, y_i)$ lies on the decision boundary, it must satisfy the above equation. In other words, the decision boundary is defined by $ax + by = 0$, a line passing through the origin! Great, now the model perfectly resonates with our initial assumptions. The last dessert to make is to define the priors for $A$ and $B$ such that it reflects our belief that any line is equally likely. This is in fact very tricky. We have to formalize the term <em>equally likely</em>. One way to formalize it is to say that the slope of the line is uniformly distributed in $\mathbb{R}$. But what is an uniform distribution in $\mathbb{R}$? The answer is that there is <strong>no</strong> uniform distribution in $\mathbb{R}$! This weired object is opposite to the $\delta$-distribution, but unfortunately is not well-defined in any mathematical framework (distribution theory, measure theory) to the best of my knowledge. It can be seen as a limit of an uniform distribution in $[-M, M]$ as $M \rightarrow \infty$, or as the stationary distribution of a Brownian motion as $t \rightarrow \infty$. OK, I feel that I&#39;m ranting on it too much. Let&#39;s try to formalize it in another way. We can say that the angle formed by the line and the positive x-axis is uniformly distributed in $[-\pi/2, \pi/2]$. This is well defined, and the angle is related to the slope through a nonlinear map $\Theta \mapsto \tan(\Theta)$. What is corresponding distribution of the slope you might ask? It is the Cauchy distribution. Uniformity in angle is essentially different from uniformity in slope, a phenomena similar to Bertrand paradox. Anyway, we can now at least realize our second formalization by sampling $\Theta$ uniformly in $[-\pi/2, \pi/2]$, and take $A = \sin\Theta$ and $B = \cos\Theta$. It turns out there is a way to generate Cauchy distribution even when $A$ and $B$ are independent. If $A$ and $B$ are independent standard normal distributions, their ratio $A/B$ (or equivalently the actual slope $-A/B$) is Cauchy distributed. Here let&#39;s adopt this approach, because the Gaussian (normal) prior is extremely popular and we&#39;ve proved that it satisfies our prior belief in this case.</p>
+
+
+  <div class="more">
+    <a href="/2015/05/23/bayesian-logistic-regression.html" class="btn">Read more or comment..</a>
+  </div>
+</div>
+
+<div class="post">
   <h3 class="title"><a href="/2014/11/13/things-about-general-exam.html">Things About General Exam</a> <span class="date">2014-11-13</span></h3>
 
   <p>Today I talked with Professor Mark Kot about my progress in the marathon of PhD. Mark was very helpful and offered me lots of advice. I&#39;m about to take my general exam this year, so it&#39;s important to keep in mind the rules.</p>
@@ -52,6 +85,7 @@
     <a href="/2014/11/13/things-about-general-exam.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2014/05/27/probability-density-function-and-partial-differential-equations.html">Probability Density Function And Partial Differential Equations</a> <span class="date">2014-05-27</span></h3>
 
@@ -91,6 +125,7 @@ See a plot of this density:</p>
     <a href="/2014/05/27/probability-density-function-and-partial-differential-equations.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2013/01/29/conferences-related-to-control.html">Conferences Related To Control</a> <span class="date">2013-01-29</span></h3>
 
@@ -122,6 +157,7 @@ Deadline: 9/27/2013</p>
     <a href="/2013/01/29/conferences-related-to-control.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/09/25/discovering-prefixes-and-suffixes.html">Discovering Prefixes And Suffixes</a> <span class="date">2012-09-25</span></h3>
 
@@ -178,6 +214,7 @@ B 8561 1.94162</p>
     <a href="/2012/09/25/discovering-prefixes-and-suffixes.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/09/06/practice-qual-summer-2010-day1-p4.html">Practice Qual Summer 2010 Day1 P4</a> <span class="date">2012-09-06</span></h3>
 
@@ -216,6 +253,7 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
     <a href="/2012/09/06/practice-qual-summer-2010-day1-p4.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/09/02/practice-qual-summer-2010-day1-p2.html">Practice Qual Summer 2010 Day1 P2</a> <span class="date">2012-09-02</span></h3>
 
@@ -251,6 +289,7 @@ There are other ways to come up with the two vectors. For example, by observatio
     <a href="/2012/09/02/practice-qual-summer-2010-day1-p2.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html">Practice Qual Summer 2010 Day1 P1</a> <span class="date">2012-08-30</span></h3>
 
@@ -290,6 +329,7 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
     <a href="/2012/08/30/practice-qual-summer-2010-day1-p1.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html">Practice Qual Summer 2010 Day1 P3</a> <span class="date">2012-08-30</span></h3>
 
@@ -327,6 +367,7 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
     <a href="/2012/08/30/practice-qual-summer-2010-day1-p3.html" class="btn">Read more or comment..</a>
   </div>
 </div>
+
 <div class="post">
   <h3 class="title"><a href="/2012/08/17/one-liners-for-text-processing.html">One Liners For Text Processing</a> <span class="date">2012-08-17</span></h3>
 
@@ -369,57 +410,7 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
     <a href="/2012/08/17/one-liners-for-text-processing.html" class="btn">Read more or comment..</a>
   </div>
 </div>
-<div class="post">
-  <h3 class="title"><a href="/2012/07/31/keep-going-reading-the-ph-d-grind.html">Keep Going -- Reading the Ph.D. Grind</a> <span class="date">2012-07-31</span></h3>
 
-  <p><em>The Ph.D. Grind</em> is a book written by Philip J. Guo, a student who has just finished his six-year graduate life at Stanford. In the book, Philip mainly addresses his research experience chronologically, giving an detailed account of the kinds of research he did and the way through which he achieved his goal. The book is freely available <a href="http://pgbovine.net/PhD-memoir.htm">here</a>.</p>
-
-<p>This book is definitely worth reading, especially for me as a grad student who is about to start his second year. Luckily Philip happens to be a CS student -- a major very close to mine. So there is a lot I can learn from his experience.</p>
-
-<p>In <em>Year One</em> Philip introduces the mechanism behind the publication of CS papers:</p>
-
-<blockquote>
-<p>Before I continue my story, I want to briefly introduce how academic papers are peer-reviewed and published. In computer science, the most prestigious venues for publishing papers are conferences. Note that in many other academic disciplines, journals are the most prestigious venues, and the word <code>conference</code> means something quite different. The computer science conference publication process works roughly as follows:</p>
-
-<ol>
-<li><p>Each conference issues a call for papers with a list of topics of interest and a specific submission deadline.</p></li>
-<li><p>Researchers submit their papers by that deadline. Each conference typically receives 100 to 300 paper submissions, and each paper contains the equivalent of 30 to 40 pages of double-spaced text.</p></li>
-<li><p>The conference program committee (PC), consisting of around 20 expert researchers, splits up the submitted papers and reviews them. Each paper is reviewed by three to five people, who are either PC members or volunteer external reviewers solicited by PC members. The review process takes about three months.</p></li>
-<li><p>After everyone on the PC is done with their reviews, the PC meets and decides which papers to accept and which to reject based on reviewer preferences.</p></li>
-<li><p>The PC emails all authors to notify them of whether their papers have been accepted or rejected and attaches the written reviews to the notification emails.</p></li>
-<li><p>Authors of accepted papers attend the conference to give a 30-minute talk on their paper. All accepted papers are then archived online in a digital library.</p></li>
-</ol>
-
-<p>A prestigious top-tier conference accepts 8 to 16 percent of submitted papers, and a second-tier conference accepts 20 to 30 percent. Due to these relatively low acceptance rates, it&#39;s not uncommon for a paper to be rejected, revised, and resubmitted several times before being accepted for publication - a process that might take several years. (A paper can be submitted to only one conference at a time.)</p>
-</blockquote>
-
-<p>Therefore it is extremely competitive to publish a top-tier conference paper. However, there are ways to improve the chance as Philip unveils the following facts:</p>
-
-<blockquote>
-<p>Since conferences usually accept less than 20 percent of paper submissions, if reviewers get a bad first impression when reading a paper, then they are likely to reject it. Dawson and I were not specialists in the empirical software measurement subfield, so we weren&#39;t able to <code>pitch</code> our paper submissions in a way that appealed to reviewers&#39; expectations.</p>
-
-<p>...</p>
-
-<p>In contrast, my paper submission with Scott and Joel was far more successful because Scott was an insider who had previously published and reviewed many papers in the HCI conference where we submitted our paper. Of course, being an insider didn&#39;t mean that our paper was scrutinized any less rigorously, since that would be unfair. However, Scott could leverage his experience to present our project&#39;s motivations and findings in a way that was the most palatable to those sorts of reviewers, thereby raising our paper&#39;s chances of acceptance.</p>
-</blockquote>
-
-<p>Thus before submitting a conference paper, it seems important to consult someone who has at least successfully pusblished a paper in that conference. It takes some time to tune the paper in order to satisfy the taste of the reviewers, so better early than late.</p>
-
-<p>Throughout the memoir, perhaps the most precious thing I learned is the importance of <strong>connection</strong>. Philip shows strong initiative and always seek advice and oppotunities from his colleagues and professors. The network enables him to gain an intern position at MSR, to find potential users of his software, to speak at Google Tech Talk, to pursue an visit to Harvard, and much more. Therefore building connection and making use of it is a key source to success. Philip also explains how in the epilogue:</p>
-
-<blockquote>
-<p>giving talks, chatting with colleagues, asking for and offering help, and expressing gratitude</p>
-</blockquote>
-
-<p>I think what hinders me from creating my connections is the lack of a good habit of consulting others. When encountering problems, I always attempt to solve them by myself, and seldom seek help from others. Asking for advice is of no harm. Instead it creates serendipities and boosts relationships. A very important point to remember.</p>
-
-<p>In spite of the successful graduation, Philip chose to quit academia and is now working at Google. His strong initiative and good working habits will certainly push himself towards future success. Anyway, thanks for the great book, Philip!</p>
-
-
-  <div class="more">
-    <a href="/2012/07/31/keep-going-reading-the-ph-d-grind.html" class="btn">Read more or comment..</a>
-  </div>
-</div>
 <script type="text/javascript">
 function init(){
 }
