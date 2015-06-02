@@ -3,7 +3,7 @@
   <channel>
     <title>Desiderata</title>
     <link>http://blog.charlesgao.com/</link>
-    <pubDate>2015-05-24 09:33:43 -0700</pubDate>
+    <pubDate>2015-05-24 10:15:40 -0700</pubDate>
     <item>
       <title>Bayesian Logistic Regression</title>
       <link>http://blog.charlesgao.com//2015/05/23/bayesian-logistic-regression.html</link>
@@ -13,8 +13,8 @@
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Bayesian Logistic Regression&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.20986146311743592" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.24499437437305482" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.33827617966444135" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.841943010087179" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -117,6 +117,102 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 
 &lt;p&gt;A quick exercise: what will the learned model predict for the point $(0, 0)$? Does the choice of prior and training examples influence the prediction for $(0, 0)$? Why?&lt;/p&gt;
 
+&lt;p&gt;Code used in this study:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="matlab"&gt;% randn(&amp;#39;seed&amp;#39;, 0);
+% rand(&amp;#39;seed&amp;#39;, 0);
+
+% prior
+mu = 0;
+sigma = 1;
+
+% draw samples from prior
+box = 3;
+x = -box:0.1:box;
+for i = 1:50
+    a = normrnd(mu, sigma);
+    b = normrnd(mu, sigma);
+    plot(x, -a/b * x, &amp;#39;color&amp;#39;, [0.8 0.8 0.8]);
+    hold on
+end
+axis([-box box -box box]);
+
+% draw prior density
+[X, Y] = meshgrid(normpdf(x, mu, sigma), normpdf(x, mu, sigma));
+pcolor(X.*Y);
+shading(&amp;#39;interp&amp;#39;);
+set(gca, &amp;#39;XTick&amp;#39;, [], &amp;#39;YTick&amp;#39;, []);
+
+% observed data
+pos = [1, 1; 2, 0; 2, 1; 0, 2; 1, 2; 0, 3; 2, -1];
+neg = [-1, 1; -1, 0; -1, -1; -1, 2; -2, 0; -2, 1; -2, 2];
+scatter(pos(:, 1), pos(:, 2), &amp;#39;o&amp;#39;);
+scatter(neg(:, 1), neg(:, 2), &amp;#39;x&amp;#39;);
+
+% draw posterior density
+prob_mat = zeros(length(x));
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+        for i = 1:size(pos, 1)
+            prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+        end
+        for i = 1:size(neg, 1)
+            prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+        end
+        prob_mat(j, k) = prob;
+    end
+end
+pcolor(transpose(prob_mat));
+shading(&amp;#39;interp&amp;#39;);
+set(gca, &amp;#39;XTick&amp;#39;, [], &amp;#39;YTick&amp;#39;, []);
+
+% draw samples from posterior by rejection sampling
+for j = 1:1000
+    a = -3 + rand()*6;
+    b = -3 + rand()*6;
+    prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+    for i = 1:size(pos, 1)
+        prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+    end
+    for i = 1:size(neg, 1)
+        prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+    end
+    u = rand();
+    if prob / max(prob_mat(:)) &amp;gt; u
+        % accept
+        plot(x, -a/b * x, &amp;#39;color&amp;#39;, [0.2 0.2 0.2]);
+    else
+        % reject
+        plot(x, -a/b * x, &amp;#39;color&amp;#39;, [0.8 0.8 0.8]);
+    end
+    hold on
+end
+axis([-box box -box box]);
+
+% the mean line
+[maxp, I] = max(prob_mat(:));
+[maxj, maxk] = ind2sub(size(prob_mat), I);
+maxa = x(maxj);
+maxb = x(maxk);
+plot(x, -maxa/maxb * x, &amp;#39;color&amp;#39;, [1 0 0], &amp;#39;LineWidth&amp;#39;, 2);
+hold on
+
+% test data point
+test = [1, 0];
+norm_prob = prob_mat / sum(prob_mat(:));
+p = 0;
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        p = p + norm_prob(j, k) * 1/(1 + exp(-a * test(1) - b * test(2)));
+    end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
     &lt;div class="post-tags"&gt;
       &lt;a href="/tags#Bayesian machine learning-ref"&gt;Bayesian machine learning&lt;/a&gt;
       &lt;a href="/tags#logistic regression-ref"&gt;logistic regression&lt;/a&gt;
@@ -166,8 +262,8 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Things About General Exam&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.022224308836198525" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3235022476087074" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7056249004349553" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.0442823626779828" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -260,8 +356,8 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Probability Density Function And Partial Differential Equations&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.5775755235103595" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.19588296370898417" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8931734483364617" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.36758091060589637" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -392,8 +488,8 @@ We can see the close relationship between the method of images and the reflectio
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Conferences Related To Control&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.6571209061197757" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8828584788473537" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7953615566802555" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03492574854338504" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -501,8 +597,8 @@ Deadline: 9/27/2013&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Discovering Prefixes And Suffixes&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.060375724975585854" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2226238957212643" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.3736167460259925" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.32354034545129273" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -874,8 +970,8 @@ done
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P4&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.1487100499828714" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7521842751630192" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4269614685952491" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.40002484084413514" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -992,8 +1088,8 @@ Then by taking the derivative of $\frac{1}{3}x^5$ respect to $x$ we get the same
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P2&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8623117330626237" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.10781870418302486" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4502870840121628" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2659622603932902" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1118,8 +1214,8 @@ One can verify that $\langle p_1(x), p_3(x) \rangle = 0$.&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P1&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.7704206952149669" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13619986126718653" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.4085949773666808" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6175408175023106" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1243,8 +1339,8 @@ The two eigenvalues of the Jacobian are both purely imaginary. So we cannot say 
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Practice Qual Summer 2010 Day1 P3&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.05631808967056384" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4216208982483233" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.44161440395911533" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.18173438184887147" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1360,8 +1456,8 @@ Your unsophisticated friend is using the forward Euler method to solve this equa
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;One Liners For Text Processing&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.51946918722203" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3769620111519497" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.43829955171894486" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2893700741477767" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;
@@ -1557,8 +1653,8 @@ rm CH CH_F PH PH_F CHPH TMP
 &lt;head&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;title&gt;Keep Going -- Reading the Ph.D. Grind&lt;/title&gt;
-  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.19743765408151148" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9887734989601079" type="text/css" rel="stylesheet" media="all"&gt;
+  &lt;link href="/assets/charlesgao/stylesheets/style.css?0.8797928393784461" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.09016464198416974" type="text/css" rel="stylesheet" media="all"&gt;
 
 
   &lt;script&gt;

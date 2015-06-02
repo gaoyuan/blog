@@ -75,7 +75,99 @@ Again the integral is a monster, but we can approximate it by sampling. For exam
 
 A quick exercise: what will the learned model predict for the point $(0, 0)$? Does the choice of prior and training examples influence the prediction for $(0, 0)$? Why?
 
+Code used in this study:
 
+```matlab
+% randn('seed', 0);
+% rand('seed', 0);
 
+% prior
+mu = 0;
+sigma = 1;
 
+% draw samples from prior
+box = 3;
+x = -box:0.1:box;
+for i = 1:50
+    a = normrnd(mu, sigma);
+    b = normrnd(mu, sigma);
+    plot(x, -a/b * x, 'color', [0.8 0.8 0.8]);
+    hold on
+end
+axis([-box box -box box]);
 
+% draw prior density
+[X, Y] = meshgrid(normpdf(x, mu, sigma), normpdf(x, mu, sigma));
+pcolor(X.*Y);
+shading('interp');
+set(gca, 'XTick', [], 'YTick', []);
+
+% observed data
+pos = [1, 1; 2, 0; 2, 1; 0, 2; 1, 2; 0, 3; 2, -1];
+neg = [-1, 1; -1, 0; -1, -1; -1, 2; -2, 0; -2, 1; -2, 2];
+scatter(pos(:, 1), pos(:, 2), 'o');
+scatter(neg(:, 1), neg(:, 2), 'x');
+
+% draw posterior density
+prob_mat = zeros(length(x));
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+        for i = 1:size(pos, 1)
+            prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+        end
+        for i = 1:size(neg, 1)
+            prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+        end
+        prob_mat(j, k) = prob;
+    end
+end
+pcolor(transpose(prob_mat));
+shading('interp');
+set(gca, 'XTick', [], 'YTick', []);
+
+% draw samples from posterior by rejection sampling
+for j = 1:1000
+    a = -3 + rand()*6;
+    b = -3 + rand()*6;
+    prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+    for i = 1:size(pos, 1)
+        prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+    end
+    for i = 1:size(neg, 1)
+        prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+    end
+    u = rand();
+    if prob / max(prob_mat(:)) > u
+        % accept
+        plot(x, -a/b * x, 'color', [0.2 0.2 0.2]);
+    else
+        % reject
+        plot(x, -a/b * x, 'color', [0.8 0.8 0.8]);
+    end
+    hold on
+end
+axis([-box box -box box]);
+
+% the mean line
+[maxp, I] = max(prob_mat(:));
+[maxj, maxk] = ind2sub(size(prob_mat), I);
+maxa = x(maxj);
+maxb = x(maxk);
+plot(x, -maxa/maxb * x, 'color', [1 0 0], 'LineWidth', 2);
+hold on
+
+% test data point
+test = [1, 0];
+norm_prob = prob_mat / sum(prob_mat(:));
+p = 0;
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        p = p + norm_prob(j, k) * 1/(1 + exp(-a * test(1) - b * test(2)));
+    end
+end
+```

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Bayesian Logistic Regression</title>
-  <link href="/assets/charlesgao/stylesheets/style.css?0.7914845183375243" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7177596328556084" type="text/css" rel="stylesheet" media="all">
+  <link href="/assets/charlesgao/stylesheets/style.css?0.7030326793035228" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/charlesgao/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1526684644446651" type="text/css" rel="stylesheet" media="all">
 
 
   <script>
@@ -106,6 +106,102 @@ P(Z^*|X^*, Z, X) = \int P(Z^*|X^*, A, B)P(A, B|X, Z)dAdB.
 Again the integral is a monster, but we can approximate it by sampling. For example, I can take the grid points in the $[-3, 3] \times [-3, 3]$ square as a rough approximation to the posterior, and make predictions by summing over all those points. For a test point $(-1, 0)$, this will return us a probability of 0.1597, so we are pretty confident that it belongs to the red class. For a test point of $(1, 0)$, the probability is 0.8403, safe to say it is green.</p>
 
 <p>A quick exercise: what will the learned model predict for the point $(0, 0)$? Does the choice of prior and training examples influence the prediction for $(0, 0)$? Why?</p>
+
+<p>Code used in this study:</p>
+
+<pre><code class="matlab">% randn(&#39;seed&#39;, 0);
+% rand(&#39;seed&#39;, 0);
+
+% prior
+mu = 0;
+sigma = 1;
+
+% draw samples from prior
+box = 3;
+x = -box:0.1:box;
+for i = 1:50
+    a = normrnd(mu, sigma);
+    b = normrnd(mu, sigma);
+    plot(x, -a/b * x, &#39;color&#39;, [0.8 0.8 0.8]);
+    hold on
+end
+axis([-box box -box box]);
+
+% draw prior density
+[X, Y] = meshgrid(normpdf(x, mu, sigma), normpdf(x, mu, sigma));
+pcolor(X.*Y);
+shading(&#39;interp&#39;);
+set(gca, &#39;XTick&#39;, [], &#39;YTick&#39;, []);
+
+% observed data
+pos = [1, 1; 2, 0; 2, 1; 0, 2; 1, 2; 0, 3; 2, -1];
+neg = [-1, 1; -1, 0; -1, -1; -1, 2; -2, 0; -2, 1; -2, 2];
+scatter(pos(:, 1), pos(:, 2), &#39;o&#39;);
+scatter(neg(:, 1), neg(:, 2), &#39;x&#39;);
+
+% draw posterior density
+prob_mat = zeros(length(x));
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+        for i = 1:size(pos, 1)
+            prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+        end
+        for i = 1:size(neg, 1)
+            prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+        end
+        prob_mat(j, k) = prob;
+    end
+end
+pcolor(transpose(prob_mat));
+shading(&#39;interp&#39;);
+set(gca, &#39;XTick&#39;, [], &#39;YTick&#39;, []);
+
+% draw samples from posterior by rejection sampling
+for j = 1:1000
+    a = -3 + rand()*6;
+    b = -3 + rand()*6;
+    prob = normpdf(a, mu, sigma) * normpdf(b, mu, sigma);
+    for i = 1:size(pos, 1)
+        prob = prob * 1/(1 + exp(-a * pos(i, 1) - b * pos(i, 2)));
+    end
+    for i = 1:size(neg, 1)
+        prob = prob * (1 - 1/(1 + exp(-a * neg(i, 1) - b * neg(i, 2))));
+    end
+    u = rand();
+    if prob / max(prob_mat(:)) &gt; u
+        % accept
+        plot(x, -a/b * x, &#39;color&#39;, [0.2 0.2 0.2]);
+    else
+        % reject
+        plot(x, -a/b * x, &#39;color&#39;, [0.8 0.8 0.8]);
+    end
+    hold on
+end
+axis([-box box -box box]);
+
+% the mean line
+[maxp, I] = max(prob_mat(:));
+[maxj, maxk] = ind2sub(size(prob_mat), I);
+maxa = x(maxj);
+maxb = x(maxk);
+plot(x, -maxa/maxb * x, &#39;color&#39;, [1 0 0], &#39;LineWidth&#39;, 2);
+hold on
+
+% test data point
+test = [1, 0];
+norm_prob = prob_mat / sum(prob_mat(:));
+p = 0;
+for j = 1:length(x)
+    for k = 1:length(x)
+        a = x(j);
+        b = x(k);
+        p = p + norm_prob(j, k) * 1/(1 + exp(-a * test(1) - b * test(2)));
+    end
+end
+</code></pre>
 
     <div class="post-tags">
       <a href="/tags#Bayesian machine learning-ref">Bayesian machine learning</a>
